@@ -1,0 +1,64 @@
+<rss version="2.0">
+<channel>
+<title>Cursos de aulaClic</title>
+<link>http://www.aulaclic.es</link>
+<description>Cursos gratuitos de aulaClic</description>
+<language>es-es</language>
+<item>
+<title>Dreamweaver 8</title>
+<guid isPermaLink="true">http://www.aulaclic.es/dreamweaver8/index.htm</guid>
+<pubDate>Mon, 29 May 2006 18:00:00 +0200</pubDate>
+<description>
+Este curso consta de 15 unidades donde aprenderás a crear tus propias páginas web en profundidad.	Abarca desde los conceptos más básicos (como configurar un sitio local) a tareas mucho más avanzadas. Los videotutoriales te ayudarán a comprender la teoría con un ejemplo práctico.
+</description>
+</item>
+<item>
+<title>Flash 8</title>
+<guid isPermaLink="true">http://www.aulaclic.es/flash8/index.htm</guid>
+<pubDate>Mon, 29 May 2006 18:00:00 +0200</pubDate>
+<description>
+Este curso consta de 15 unidades donde aprenderás a crear sitios utilizando el programa Macromedia Flash. Abarca desde los conceptos más básicos (como crear animaciones simples) a tareas mucho más avanzadas. Los videotutoriales te ayudarán a comprender la teoría con un ejemplo práctico.
+</description>
+</item>
+<item>
+<title>Photoshop CS</title>
+<guid isPermaLink="true">http://www.aulaclic.es/photoshop/index.htm</guid>
+<pubDate>Mon, 29 May 2006 18:00:00 +0200</pubDate>
+<description>
+Este curso consta de 11 unidades donde aprenderás a manipular imágenes con el programa más utilizado del mundo. Abarca desde los conceptos más básicos (como el trabajo con capas) a tareas mucho más avanzadas. Los videotutoriales te ayudarán a comprender la teoría con un ejemplo práctico.
+</description>
+</item>
+<item>
+<title>Word 2003</title>
+<guid isPermaLink="true">http://www.aulaclic.es/word2003/index.htm</guid>
+<pubDate>Mon, 29 May 2006 18:00:00 +0200</pubDate>
+<description>
+Este curso consta de 12 unidades donde aprenderás a utilizar el procesador de textos de Office en profundidad. Abarca desde los conceptos más básicos (como la edición básica de textos) a tareas mucho más avanzadas. Los videotutoriales te ayudarán a comprender la teoría con un ejemplo práctico.
+</description>
+</item>
+<item>
+<title>Access 2003</title>
+<guid isPermaLink="true">http://www.aulaclic.es/access2003/index.htm</guid>
+<pubDate>Mon, 29 May 2006 18:00:00 +0200</pubDate>
+<description>
+Este curso consta de 12 unidades donde aprenderás a crear bases de datos que te ayudarán a organizar tu información en profundidad. Abarca desde los conceptos más básicos (como crear tablas en una nueva base de datos) a tareas mucho más avanzadas. Los videotutoriales te ayudarán a comprender la teoría con un ejemplo práctico.
+</description>
+</item>
+<item>
+<title>Excel 2003</title>
+<guid isPermaLink="true">http://www.aulaclic.es/excel2003/index.htm</guid>
+<pubDate>Mon, 29 May 2006 18:00:00 +0200</pubDate>
+<description>
+Este curso consta de 10 unidades donde aprenderás a utilizar hojas de cálculo con Microsoft Excel. Abarca desde los conceptos más básicos (como utilizar fórmulas y funciones) a tareas mucho más avanzadas. Los videotutoriales te ayudarán a comprender la teoría con un ejemplo práctico.
+</description>
+</item>
+<item>
+<title>Windows XP</title>
+<guid isPermaLink="true">http://www.aulaclic.es/winxp/index.htm</guid>
+<pubDate>Mon, 29 May 2006 18:00:00 +0200</pubDate>
+<description>
+Este curso consta de 15 unidades donde aprenderás a utilizar el Sistema Operativo más utilizado en profundidad.	Abarca desde los conceptos más básicos (como configurar el ratón) a tareas mucho más avanzadas. Los videotutoriales te ayudarán a comprender la teoría con un ejemplo práctico.
+</description>
+</item>
+</channel>
+</rss>
