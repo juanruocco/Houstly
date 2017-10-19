@@ -1,2 +1,21 @@
-<h1>Rooms#index</h1>
-<p>Find me in app/views/rooms/index.html.erb</p>
+<h1>Cuartos!</h1>
+
+<%= render "form" %>
+
+<table>
+  <%
+  rooms = current_place.rooms
+  rooms.each do |room| %>
+  <tr>
+    <td><%= room.name %></td>
+    <td><%= room.description %></td>
+    <td><%= room.picture %></td>
+    <td><%= link_to "Edit", edit_room_path(room), class: "btn btn-default" %></td>
+    <td>
+      <%= button_to "Delete", room, method: :delete, data: { confirm: "Are you sure you wish to delete #{room.name} #{room.description}?" }, class: "btn btn-danger" %>
+    </td>
+
+  </tr>
+
+  <% end %>
+</table>

@@ -1,0 +1,7 @@
+<%= form_for @room do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Description: <%= f.text_field :description %>
+  Picture Name: <%= f.text_field :picture %>
+  <%= f.submit "Submit" %>
+<% end %>
