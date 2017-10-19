@@ -1,0 +1,32 @@
+<h1>HOTELES!</h1>
+
+<%= form_for :place, url: '/place' do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Description: <%= f.text_field :description %>
+  Picture: <%= f.text_field :picture %>
+  Video URL: <%= f.text_field :video_url %>
+  <%= f.submit "Submit" %>
+
+  <table>
+    <%
+    Place.all.each do |place| %>
+    <tr>
+      <td>
+        <%= place.name %>
+      </td>
+      <td>
+        <%= place.description %>
+      </td>
+      <td>
+        <%= place.picture %>
+      </td>
+      <td>
+        <%= place.video_url %>
+      </td>
+    </tr>
+
+    <% end %>
+  </table>
+
+<% end %>

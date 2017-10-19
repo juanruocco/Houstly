@@ -1,0 +1,26 @@
+<h1>Tours!</h1>
+
+<%= form_for :tour, url: '/tours' do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Description: <%= f.text_field :description %>
+  Picture Name: <%= f.text_field :picture %>
+  <%= f.submit "Submit" %>
+
+
+  <table>
+    <%
+    tours = current_place.tours
+    tours.each do |tour| %>
+    <tr>
+      <td>
+        <%= tour.name %>
+        <%= tour.description %>
+        <%= tour.picture %>
+      </td>
+    </tr>
+
+    <% end %>
+  </table>
+
+<% end %>

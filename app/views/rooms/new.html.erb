@@ -1,0 +1,26 @@
+<h1>Cuartos!</h1>
+
+<%= form_for :room, url: '/rooms' do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Description: <%= f.text_field :description %>
+  Picture Name: <%= f.text_field :picture %>
+  <%= f.submit "Submit" %>
+
+
+  <table>
+    <%
+    rooms = current_place.rooms
+    rooms.each do |room| %>
+    <tr>
+      <td>
+        <%= room.name %>
+        <%= room.description %>
+        <%= room.picture %>
+      </td>
+    </tr>
+
+    <% end %>
+  </table>
+
+<% end %>
