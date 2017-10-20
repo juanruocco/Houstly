@@ -1,0 +1,11 @@
+<%= form_for @place do |f| %>
+
+  Name ID: <%= f.text_field :name_id %>
+  Name: <%= f.text_field :name %>
+  Description: <%= f.text_field :description %>
+  Location: <%= f.text_field :location_name %>
+  Video url: <%= f.text_field :video_url %>
+  Number Sliders Images: <%= f.text_field :max_slider_images %>
+  Number Thumb Images: <%= f.text_field :max_thumb_images %>
+  <%= f.submit "Submit" %>
+<% end %>

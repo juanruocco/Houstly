@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :rooms, :tours
+  resources :rooms, :tours, :places
 
   root 'welcome#index'
 

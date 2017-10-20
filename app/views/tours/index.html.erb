@@ -9,14 +9,14 @@
     tours.each do |tour| %>
     <tr>
       <td>
-        <%= tour.name %>
+        <%= tour.name_id %>
+        <%= tour.title %>
         <%= tour.description %>
-        <%= tour.picture %>
       </td>
 
       <td><%= link_to "Edit", edit_tour_path(tour), class: "btn btn-default" %></td>
       <td>
-        <%= button_to "Delete", tour, method: :delete, data: { confirm: "Are you sure you wish to delete #{tour.name} #{tour.description}?" }, class: "btn btn-danger" %>
+        <%= button_to "Delete", tour, method: :delete, data: { confirm: "Are you sure you wish to delete #{tour.name_id} #{tour.title}?" }, class: "btn btn-danger" %>
       </td>
     </tr>
     <% end %>

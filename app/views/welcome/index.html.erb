@@ -1,27 +1,42 @@
 <html lang="es-CO" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <script src="/assets/jquery-3.2.1.min.js"></script>
+  <script src="/assets/test.js"></script>
   <link rel="stylesheet" href="/assets/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/mystyle.css">
 
 </head>
 <body>
+  <%
+    place = Place.find_by(:name_id => "finca")
+    name_id =place.name_id
+    name = place.name
+    location = place.location_name
+    image_url = "/assets/#{name_id}_slider1.jpg"
+    description = place.description
+    video = place.video_url
+    thumb_images = place.max_thumb_images
+    rooms = place.rooms.all
+    tours = place.tours.all
+  %>
+
+
   <div id="home-slider">
     <style scoped="">#main-flex-slider .themo_slider_0{padding-top:295px ; padding-bottom:290px }
     </style>
     <div id="main-flex-slider" class="flexslider" style="height: 971px;">
       <ul class="slides">
         <li class="flex-active-slide" style="width: 100%;float: left;margin-right: -100%;position: relative;opacity: 1;display: block;z-index: 2;">
-          <div class="slider-bg slide-cal-center light-text themo_slider_0" style="background-image: url(&quot; /assets/vlcsnap-2016-12-06-21h46m07s944-1.jpg&quot;);padding-top: 429px;">
+          <div class="slider-bg slide-cal-center light-text themo_slider_0" style="background-image: url(<%=image_url%>);padding-top: 429px;">
             <div class="container">
               <div class="row ">
                 <div class="slider-content col-sm-6">
-                  <h1 class="slider-title">Finca el Cielo</h1>
+                  <h1 class="slider-title"><%=name%></h1>
                   <div class="slider-subtitle ">
-                    <p>San Agustin, Colombia.</p>
+                    <p><%=location%></p>
                   </div>
                   <div class="page-title-button ">
-                    <a href="https://www.freetobook.com/affiliates/reservation.php?w_id=19033&amp;w_tkn=PVxKhqoKR0RHK4cG5GDygTtIFPPzPGtqxMwTb3q8R9Q5bNeGycX3ShfRinKUX" target="_blank" class="btn btn-ghost   th-btn">Reservar</a>
+                    <a href="" target="_blank" class="btn btn-ghost   th-btn">Reservar</a>
                   </div>
                 </div>
               </div><!-- /.row -->
@@ -48,11 +63,17 @@
           <div class="col-md-12">
             <div class="row">
               <div class="col-md-6">
-                <h2>Hotel Finca el Cielo</h2>
-                <p>La Finca el Cielo es el mejor sitio que puedes encontrar para relajarte y conocer a&nbsp;San Agustin. Ven y disfruta de la naturaleza y la arqueologia que ofrece este lugar</p>
+                <h2>Hotel <%=name%></h2>
+                <p><%=description%></p>
               </div>
               <div class="col-md-6">
-                <p><iframe src="https://www.youtube.com/embed/0fpL7OzKP5w?rel=0&amp;controls=0&amp;showinfo=0" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+
+
+
+
+
+                <p>
+                  <iframe src= '<%=video%>' width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
                 <p></p>
               </div>
             </div>
@@ -68,18 +89,18 @@
           <div id="themo_thumb_slider_1_inner" class="thumb-flex-slider flexslider flex-landscape col-xs-12"><!-- /.slides -->
             <div class="flex-viewport" style="overflow: hidden; position: relative;">
               <ul class="slides gallery" style="width: 1000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
-                <li class="thumb-flex-slider-img-1" style="width: 255px; float: left; display: block;">
-                  <img width="255" height="170" src=" /assets/DSC05578-255x170.jpg" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt="" srcset=" /assets/DSC05578-255x170.jpg 255w,  /assets/DSC05578-300x200.jpg 300w,  /assets/DSC05578-768x512.jpg 768w,  /assets/DSC05578-1024x683.jpg 1024w,  /assets/DSC05578-150x100.jpg 150w,  /assets/DSC05578-1140x760.jpg 1140w,  /assets/DSC05578-120x80.jpg 120w,  /assets/DSC05578-60x40.jpg 60w,  /assets/DSC05578-480x320.jpg 480w,  /assets/DSC05578-500x333.jpg 500w,  /assets/DSC05578-750x500.jpg 750w,  /assets/DSC05578-360x240.jpg 360w,  /assets/DSC05578.jpg 1224w" sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
+
+                <%
+                  for thumb_index in 1..thumb_images
+                    name_thumb_image = "/assets/#{name_id}_thumb#{thumb_index}"
+                %>
+                <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
+                  <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
                 </li>
-                <li class="thumb-flex-slider-img-2" style="width: 255px; float: left; display: block;"><img width="255" height="170" src=" /assets/vlcsnap-2016-12-06-21h25m24s217-255x170.jpg" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt="" draggable="false" style="display: inline;"></li><li class="thumb-flex-slider-img-3" style="width: 255px; float: left; display: block;">
-                    <img width="255" height="170" src=" /assets/vlcsnap-2016-11-19-20h22m50s670-255x170.jpg" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt="" srcset=" /assets/vlcsnap-2016-11-19-20h22m50s670-255x170.jpg 255w,  /assets/vlcsnap-2016-11-19-20h22m50s670-300x200.jpg 300w,  /assets/vlcsnap-2016-11-19-20h22m50s670-768x512.jpg 768w,  /assets/vlcsnap-2016-11-19-20h22m50s670-1024x683.jpg 1024w,  /assets/vlcsnap-2016-11-19-20h22m50s670-150x100.jpg 150w,  /assets/vlcsnap-2016-11-19-20h22m50s670-1140x760.jpg 1140w,  /assets/vlcsnap-2016-11-19-20h22m50s670-120x80.jpg 120w,  /assets/vlcsnap-2016-11-19-20h22m50s670-60x40.jpg 60w,  /assets/vlcsnap-2016-11-19-20h22m50s670-480x320.jpg 480w,  /assets/vlcsnap-2016-11-19-20h22m50s670-500x333.jpg 500w,  /assets/vlcsnap-2016-11-19-20h22m50s670-750x500.jpg 750w,  /assets/vlcsnap-2016-11-19-20h22m50s670-360x240.jpg 360w,  /assets/vlcsnap-2016-11-19-20h22m50s670.jpg 1224w" sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
-                  </li>
-                  <li class="thumb-flex-slider-img-4" style="width: 255px; float: left; display: block;">
-                    <img width="255" height="170" src=" /assets/DSC05503-255x170.jpg" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt="" srcset=" /assets/DSC05503-255x170.jpg 255w,  /assets/DSC05503-300x200.jpg 300w,  /assets/DSC05503-768x512.jpg 768w,  /assets/DSC05503-1024x683.jpg 1024w,  /assets/DSC05503-150x100.jpg 150w,  /assets/DSC05503-1140x760.jpg 1140w,  /assets/DSC05503-120x80.jpg 120w,  /assets/DSC05503-60x40.jpg 60w,  /assets/DSC05503-480x320.jpg 480w,  /assets/DSC05503-500x333.jpg 500w,  /assets/DSC05503-750x500.jpg 750w,  /assets/DSC05503-360x240.jpg 360w,  /assets/DSC05503.jpg 1224w" sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
-                  </li>
-                  <li class="thumb-flex-slider-img-5" style="width: 255px; float: left; display: block;">
-                    <img width="255" height="170" src=" /assets/vlcsnap-2016-12-06-22h05m50s004-255x170.jpg" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt="" draggable="false" style="display: inline;">
-                  </li>
+                <%
+                  end
+                %>
+
                 </ul>
               </div>
               <ul class="flex-direction-nav">
@@ -93,11 +114,11 @@
             </div> <!-- /.thumb-flex-slider -->
           </div><!-- /.row -->
           <script>
-            $(window).on('load', function()
-            {
-				       jQuery('.thumb-flex-slider').show();
-               //themo_start_thumb_slider('#themo_thumb_slider_1_inner');
-			      });
+            // $(window).on('load', function()
+            // {
+				    //    jQuery('.thumb-flex-slider').show();
+            //    themo_start_thumb_slider('#themo_thumb_slider_1_inner');
+			      // });
           </script>
 			</div><!-- /.container -->
     </section>
@@ -116,133 +137,32 @@
             <p>Escoje tu cuarto favorito</p>
           </div>
         </div><!-- /.row -->
-        <div id="rooms-row" class="rooms-row row themo_rooms_1 three-columns">
-          <div id="themo_rooms_1-post-1371" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1371 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
-            <div class="room-wrap">
-              <img width="380" height="380" src="http://hotel.juaventuras.com/wp-content/uploads/2017/04/Saturno4a-380x380.jpg" class="img-responsive room-img wp-post-image" alt="" srcset="http://hotel.juaventuras.com/wp-content/uploads/2017/04/Saturno4a-380x380.jpg 380w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Saturno4a-150x150.jpg 150w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Saturno4a-180x180.jpg 180w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Saturno4a-300x300.jpg 300w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Saturno4a-600x600.jpg 600w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Saturno4a-60x60.jpg 60w" sizes="(max-width: 380px) 100vw, 380px">
-              <div class="room-overlay">
-              </div>
-              <div class="room-inner" style="height: 313px;">
-                <div class="room-center" style="visibility: visible;">
-                  <h3 class="room-title">Saturno</h3>
-                  <div class="pricing-cost">
-                    aprox 200k<span>/noche</span>
-                  </div>
-                </div><!-- /.room-center -->
-                <a class="room-link" href="http://hotel.juaventuras.com/rooms/saturno/?portorder=menu"></a>
-              </div><!-- /.room-inner -->
-            </div><!-- /.room-wrap -->
-          </div><!-- /.col-md -->
-          <div id="themo_rooms_1-post-1380" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1380 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
-            <div class="room-wrap">
-              <img width="380" height="380" src=" /assets/DSC05733-380x380.jpg" class="img-responsive room-img wp-post-image" alt="" srcset=" /assets/DSC05733-380x380.jpg 380w,  /assets/DSC05733-150x150.jpg 150w,  /assets/DSC05733-180x180.jpg 180w,  /assets/DSC05733-300x300.jpg 300w,  /assets/DSC05733-600x600.jpg 600w,  /assets/DSC05733-60x60.jpg 60w" sizes="(max-width: 380px) 100vw, 380px">
-            <div class="room-overlay"></div>
-            <div class="room-inner" style="height: 313px;">
-              <div class="room-center" style="visibility: visible;">
-                <h3 class="room-title">Neptuno</h3>
-                <div class="pricing-cost">
-                  aprox 200k<span>/noche</span>
-                </div>
-              </div><!-- /.room-center -->
-              <a class="room-link" href="http://hotel.juaventuras.com/rooms/neptuno/?portorder=menu"></a>
-            </div><!-- /.room-inner -->
-          </div><!-- /.room-wrap -->
-        </div><!-- /.col-md -->
-        <div id="themo_rooms_1-post-1387" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1387 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
+        <%
+          rooms.each do |room|
+            room_name = room.name
+            room_description = room.description
+            room_image_url = "/assets/#{name_id}_room_thumb_#{room_name}"
+        %>
+        <div id="themo_rooms_1-post-1371" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1371 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
           <div class="room-wrap">
-            <img width="380" height="380" src="http://hotel.juaventuras.com/wp-content/uploads/2017/04/Mercurio2-380x380.jpg" class="img-responsive room-img wp-post-image" alt="" srcset="http://hotel.juaventuras.com/wp-content/uploads/2017/04/Mercurio2-380x380.jpg 380w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Mercurio2-150x150.jpg 150w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Mercurio2-180x180.jpg 180w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Mercurio2-300x300.jpg 300w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Mercurio2-600x600.jpg 600w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/Mercurio2-60x60.jpg 60w" sizes="(max-width: 380px) 100vw, 380px">
-            <div class="room-overlay"></div>
-            <div class="room-inner" style="height: 313px;">
-              <div class="room-center" style="visibility: visible;">
-                <h3 class="room-title">Mercurio</h3>
-                <div class="pricing-cost">
-                  aprox 200k<span>/noche</span>
-                </div>
-              </div><!-- /.room-center -->
-              <a class="room-link" href="http://hotel.juaventuras.com/rooms/mercurio/?portorder=menu"></a>
-            </div><!-- /.room-inner -->
-          </div><!-- /.room-wrap -->
-        </div><!-- /.col-md -->
-        <div id="themo_rooms_1-post-1404" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1404 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
-          <div class="room-wrap">
-            <img width="380" height="380" src="http://hotel.juaventuras.com/wp-content/uploads/2017/04/venus5-380x380.jpg" class="img-responsive room-img wp-post-image" alt="" srcset="http://hotel.juaventuras.com/wp-content/uploads/2017/04/venus5-380x380.jpg 380w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/venus5-150x150.jpg 150w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/venus5-180x180.jpg 180w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/venus5-300x300.jpg 300w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/venus5-600x600.jpg 600w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/venus5-60x60.jpg 60w" sizes="(max-width: 380px) 100vw, 380px">
+            <img width="380" height="380" src='<%=room_image_url%>' class="img-responsive room-img wp-post-image" alt=""  sizes="(max-width: 380px) 100vw, 380px">
             <div class="room-overlay">
             </div>
             <div class="room-inner" style="height: 313px;">
               <div class="room-center" style="visibility: visible;">
-                <h3 class="room-title">Venus</h3>
-                <div class="pricing-cost">aprox 200k<span>/noche</span></div>
-              </div><!-- /.room-center --><a class="room-link" href="http://hotel.juaventuras.com/rooms/venus/?portorder=menu"></a>
-            </div><!-- /.room-inner -->
-          </div><!-- /.room-wrap -->
-        </div><!-- /.col-md -->
-        <div id="themo_rooms_1-post-1411" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1411 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
-          <div class="room-wrap">
-            <img width="380" height="380" src="http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05702-380x380.jpg" class="img-responsive room-img wp-post-image" alt="" srcset="http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05702-380x380.jpg 380w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05702-150x150.jpg 150w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05702-180x180.jpg 180w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05702-300x300.jpg 300w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05702-600x600.jpg 600w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05702-60x60.jpg 60w" sizes="(max-width: 380px) 100vw, 380px">
-            <div class="room-overlay"></div>
-            <div class="room-inner" style="height: 313px;">
-              <div class="room-center" style="visibility: visible;">
-                <h3 class="room-title">Tierra</h3>
-                <div class="pricing-cost">aprox 200k<span>/noche</span></div>
-              </div><!-- /.room-center -->
-              <a class="room-link" href="http://hotel.juaventuras.com/rooms/tierra/?portorder=menu"></a>
-            </div><!-- /.room-inner -->
-          </div><!-- /.room-wrap -->
-        </div><!-- /.col-md -->
-        <div id="themo_rooms_1-post-1413" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1413 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
-          <div class="room-wrap">
-            <img width="380" height="380" src="http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05884-HDR-380x380.jpg" class="img-responsive room-img wp-post-image" alt="" srcset="http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05884-HDR-380x380.jpg 380w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05884-HDR-150x150.jpg 150w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05884-HDR-180x180.jpg 180w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05884-HDR-300x300.jpg 300w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05884-HDR-600x600.jpg 600w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/DSC05884-HDR-60x60.jpg 60w" sizes="(max-width: 380px) 100vw, 380px">
-            <div class="room-overlay"></div>
-            <div class="room-inner" style="height: 313px;">
-              <div class="room-center" style="visibility: visible;">
-                <h3 class="room-title">Pluton</h3>
+                <h3 class="room-title">Saturno</h3>
                 <div class="pricing-cost">
-                  aprox 200k<span>/noche</span>
+                  <%=room_description%>
                 </div>
               </div><!-- /.room-center -->
-              <a class="room-link" href="http://hotel.juaventuras.com/rooms/pluton/?portorder=menu"></a>
+              <a class="room-link" href="#"></a>
             </div><!-- /.room-inner -->
           </div><!-- /.room-wrap -->
         </div><!-- /.col-md -->
-        <div id="themo_rooms_1-post-1424" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1424 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
-          <div class="room-wrap">
-            <img width="380" height="380" src="http://hotel.juaventuras.com/wp-content/uploads/2017/04/vlcsnap-2016-12-06-21h37m02s195-380x380.jpg" class="img-responsive room-img wp-post-image" alt="" srcset="http://hotel.juaventuras.com/wp-content/uploads/2017/04/vlcsnap-2016-12-06-21h37m02s195-380x380.jpg 380w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/vlcsnap-2016-12-06-21h37m02s195-150x150.jpg 150w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/vlcsnap-2016-12-06-21h37m02s195-180x180.jpg 180w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/vlcsnap-2016-12-06-21h37m02s195-300x300.jpg 300w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/vlcsnap-2016-12-06-21h37m02s195-600x600.jpg 600w, http://hotel.juaventuras.com/wp-content/uploads/2017/04/vlcsnap-2016-12-06-21h37m02s195-60x60.jpg 60w" sizes="(max-width: 380px) 100vw, 380px">
-            <div class="room-overlay"></div>
-            <div class="room-inner" style="height: 313px;">
-              <div class="room-center" style="visibility: visible;">
-                <h3 class="room-title">Jupiter</h3>
-                <p class="room-sub"> 3 camas dobles</p>
-                <div class="pricing-cost">aprox 200k<span>/noche</span></div>
-              </div><!-- /.room-center -->
-              <a class="room-link" href="http://hotel.juaventuras.com/rooms/jupiter/?portorder=menu"></a>
-            </div><!-- /.room-inner -->
-          </div><!-- /.room-wrap -->
-        </div><!-- /.col-md -->
-        <div id="themo_rooms_1-post-383" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite p-queen post-383 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite themo_room_type-queen" style="height: 313px;">
-          <div class="room-wrap">
-            <img width="380" height="380" src=" /assets/DSC05573-380x380.jpg" class="img-responsive room-img wp-post-image" alt="" srcset=" /assets/DSC05573-380x380.jpg 380w,  /assets/DSC05573-150x150.jpg 150w,  /assets/DSC05573-180x180.jpg 180w,  /assets/DSC05573-300x300.jpg 300w,  /assets/DSC05573-600x600.jpg 600w,  /assets/DSC05573-60x60.jpg 60w" sizes="(max-width: 380px) 100vw, 380px">
-            <div class="room-overlay"></div>
-            <div class="room-inner" style="height: 313px;">
-              <div class="room-center" style="visibility: visible;">
-                <h3 class="room-title">Urano</h3>
-                <p class="room-sub">2 camas tipo queen</p>
-                <div class="pricing-cost">
-                  $350k-$420k<span>/noche</span>
-                </div>
-              </div><!-- /.room-center -->
-              <a class="room-link" href="http://hotel.juaventuras.com/rooms/urano/?portorder=menu"></a>
-            </div><!-- /.room-inner -->
-          </div><!-- /.room-wrap -->
-        </div><!-- /.col-md -->
+        <%end%>
       </div><!-- /.row -->
     </div><!-- /.container -->
   </section>
-  </div>
-
-
-  <style scoped="">
-    section#themo_featured_1{padding-top:75px; padding-bottom:75px}
-  </style>
 
   <div id="Packetes">
     <section id="themo_featured_1" class=" features ">
@@ -255,89 +175,39 @@
             </div><!-- /.section-header -->
           </div><!-- /.row -->
           <div class="row">
+            <%
+            tours.each do |tour|
+              tour_name_id = tour.name_id
+              tour_title = tour.title
+              tour_description = tour.description
+              tour_image = "/assets/#{name_id}_tour_thumb_#{tour_name_id}"
+            %>
+
             <div class="col-md-6">
               <div class="feature-block">
-                <img width="555" height="290" src="http://hotel.juaventuras.com/wp-content/uploads/2015/06/IMG_0235-555x290.jpg" class="feature-img-1 wp-post-image" alt="">
-                <h3 class="feature-title-1">Paseo a caballo por los tres sitios</h3>
+                <img width="555" height="290" src='<%=tour_image%>' class="feature-img-1 wp-post-image" alt="">
+                <h3 class="feature-title-1"><%=tour_title%></h3>
                 <div class="feature-text-1">
-                  <p>Recorrido en caballo por tres sitios cercanos a la finca</p>
+                  <p><%=tour_description%></p>
                 </div>
+
               </div><!-- /.feature-block -->
             </div><!-- /.col-md-6 -->
-            <div class="col-md-6">
-              <div class="feature-block">
-                <img width="555" height="290" src=" /assets/rafting2-555x290.jpg" class="feature-img-2 wp-post-image" alt="">
-                <h3 class="feature-title-2">Rafting</h3>
-                <div class="feature-text-2">
-                  <p>Rafting emocionante en el rio magdalena</p>
-                </div>
-              </div><!-- /.feature-block -->
-            </div><!-- /.col-md-6 -->
+            <%end%>
+
           </div><!--/row-->
-          <div class="row">
-            <div class="col-md-6">
-              <div class="feature-block">
-                <img width="555" height="290" src=" /assets/DSC06514-555x290.jpg" class="feature-img-3 wp-post-image" alt="">
-                <h3 class="feature-title-3">Noche romantica $29 /persona</h3>
-                <div class="feature-text-3">
-                  <p>Una noche romantica para dos</p>
-                </div>
-              </div><!-- /.feature-block -->
-            </div><!-- /.col-md-6 -->
-            <div class="col-md-6">
-              <div class="feature-block">
-                <img width="555" height="290" src=" /assets/tresSitios2-555x290.jpg" class="feature-img-4 wp-post-image" alt="">
-                <h3 class="feature-title-4">Tour de los tres sitios</h3>
-                <div class="feature-text-4">
-                  <p>Parques en los alrededores de la Finca El Cielo</p>
-                </div>
-              </div><!-- /.feature-block -->
-            </div><!-- /.col-md-6 -->
-          </div><!--/row-->
-          <div class="row">
-            <div class="col-md-6">
-              <div class="feature-block">
-                <img width="555" height="290" src=" /assets/desierto-555x290.jpg" class="feature-img-5 wp-post-image" alt="">
-                <h3 class="feature-title-5">Desierto de la tatacoa</h3>
-                <div class="feature-text-5">
-                  <p>El desierto de la tatacoa es una maravilloso sitio para visitar en colombia a 5 horas de san agustin.</p>
-                </div>
-              </div><!-- /.feature-block -->
-            </div><!-- /.col-md-6 -->
-            <div class="col-md-6">
-              <div class="feature-block">
-                <img width="555" height="290" src=" /assets/mocoa-555x290.jpg" class="feature-img-6 wp-post-image" alt="">
-                <h3 class="feature-title-6">Mocoa, selva y naturaleza</h3>
-                <div class="feature-text-6">
-                  <p>Una excursion a tres horas de San Agustin, un sitio perfecto para encontrarte con cascadas, selva y rios.</p>
-                </div>
-              </div><!-- /.feature-block -->
-            </div><!-- /.col-md-6 -->
-          </div><!--/row-->
-          <div class="row">
-            <div class="col-md-6">
-              <div class="feature-block">
-                <img width="555" height="290" src=" /assets/AltoDeLosIdolos8-555x290.jpg" class="feature-img-7 wp-post-image" alt="">
-                <h3 class="feature-title-7">Recorrido Jeep a los altos de los idolos</h3>
-                <div class="feature-text-7">
-                  <p>Recorrido en jeep por el estrecho, obando, alto de los idolos, alto de las piedras y el salto de mortiño</p>
-                </div>
-              </div><!-- /.feature-block -->
-            </div><!-- /.col-md-6 -->
-            <div class="col-md-6">
-              <div class="feature-block">
-                <img width="555" height="290" src=" /assets/san-agustin-555x290.jpg" class="feature-img-8 wp-post-image" alt="">
-                <h3 class="feature-title-8">Parque arqueologico San Agustin</h3>
-                <div class="feature-text-8">
-                  <p>Parque arqueologico patrimonio de la Humanidad</p>
-                </div>
-              </div><!-- /.feature-block -->
-            </div><!-- /.col-md-6 -->
-          </div><!--/row-->
+
+
+
         </div>
       </div><!-- /.container -->
     </section>
   </div>
 
+
+
+
+
+</div>
 
 </html>

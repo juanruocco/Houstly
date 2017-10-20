@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
 
   def create
     @room = Room.new(room_params)
-    current_place.rooms << room
+    current_place.rooms << @room
     redirect_to '/rooms'
   end
 
@@ -39,6 +39,6 @@ class RoomsController < ApplicationController
 
   private
   def room_params
-    params.require(:room).permit(:name, :description, :picture)
+    params.require(:room).permit(:name, :description)
   end
 end

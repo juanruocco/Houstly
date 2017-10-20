@@ -39,6 +39,6 @@ class ToursController < ApplicationController
 
   private
   def tour_params
-    params.require(:tour).permit(:name, :description, :picture)
+    params.require(:tour).permit(:name_id, :title, :description)
   end
 end
