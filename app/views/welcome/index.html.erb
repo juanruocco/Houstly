@@ -1,14 +1,5 @@
 <html lang="es-CO" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <%= stylesheet_link_tag 'mystyle.css' %>
-  <%= stylesheet_link_tag 'bootstrap.min.css' %>
-  <%= javascript_include_tag 'jquery-3.2.1.min.js' %>
-  <%= javascript_include_tag 'test.js' %>
-
-  <!-- <script src="/assets/jquery-3.2.1.min.js"></script>
-  <script src="/assets/test.js"></script>
-  <link rel="stylesheet" href="/assets/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/mystyle.css"> -->
 
 </head>
 <body>
@@ -17,7 +8,7 @@
     name_id =place.name_id
     name = place.name
     location = place.location_name
-    image_url = "/images/#{name_id}_slider1.jpg"
+    image_url = image_path("/assets/#{name_id}_slider1.jpg")
     description = place.description
     video = place.video_url
     thumb_images = place.max_thumb_images
