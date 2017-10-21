@@ -49850,3 +49850,60 @@ MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00043s
 Completed 200 OK in 487ms (Views: 476.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-20 20:29:18 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0009109999999999999s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000848s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000899s
+  Rendered welcome/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 353ms (Views: 350.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-20 20:29:19 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000968s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002761s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0006929999999999999s
+  Rendered welcome/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 112ms (Views: 109.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-20 20:30:05 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001958s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000615s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000549s
+  Rendered welcome/index.html.erb within layouts/application (369.4ms)
+Completed 200 OK in 489ms (Views: 475.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-20 20:30:12 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000643s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0005139999999999999s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001303s
+  Rendered welcome/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 116ms (Views: 114.4ms)
+
+

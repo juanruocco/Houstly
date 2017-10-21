@@ -89,7 +89,7 @@
 
                 <%
                   for thumb_index in 1..thumb_images
-                    name_thumb_image = asset_path("#{name_id}_thumb#{thumb_index}")
+                    name_thumb_image = asset_path("#{name_id}_thumb#{thumb_index}.jpg")
                 %>
                 <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
                   <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
