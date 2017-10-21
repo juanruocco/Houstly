@@ -9,6 +9,7 @@
     name = place.name
     location = place.location_name
     image_url = "/assets/#{name_id}_slider1.jpg"
+
     description = place.description
     video = place.video_url
     thumb_images = place.max_thumb_images
@@ -23,7 +24,7 @@
     <div id="main-flex-slider" class="flexslider" style="height: 971px;">
       <ul class="slides">
         <li class="flex-active-slide" style="width: 100%;float: left;margin-right: -100%;position: relative;opacity: 1;display: block;z-index: 2;">
-          <div class="slider-bg slide-cal-center light-text themo_slider_0" style="background-image: url(<%= asset_path(image_url) %>);padding-top: 429px;">
+          <div class="slider-bg slide-cal-center light-text themo_slider_0" style="background-image: url(<%= asset_path('finca_slider1.jpg') %>);padding-top: 429px;">
             <div class="container">
               <div class="row ">
                 <div class="slider-content col-sm-6">
