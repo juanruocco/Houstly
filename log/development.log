@@ -49832,3 +49832,21 @@ puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
 puma (3.10.0) lib/puma/server.rb:437:in `process_client'
 puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-20 20:23:06 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00194s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000674s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00043s
+  Rendered welcome/index.html.erb within layouts/application (306.4ms)
+Completed 200 OK in 487ms (Views: 476.5ms)
+
+
