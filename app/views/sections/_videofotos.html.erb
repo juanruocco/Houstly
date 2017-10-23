@@ -1,0 +1,66 @@
++
+
+
+<div id="wild-beauty">
+  <section id="themo_html_3" class=" content-editor ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Hotel <%=@name%></h2>
+              <p><%=@description%></p>
+            </div>
+            <div class="col-md-6">
+
+              <p>
+                <iframe src= '<%=@video%>' width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container -->
+  </section>
+</div>
+<div>
+  <section id="themo_thumb_slider_1" class=" thumb-slider ">
+    <div class="container">
+      <div class="row">
+        <div id="themo_thumb_slider_1_inner" class="thumb-flex-slider flexslider flex-landscape col-xs-12"><!-- /.slides -->
+          <div class="flex-viewport" style="overflow: hidden; position: relative;">
+            <ul class="slides gallery" style="width: 1000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+
+              <%
+                for thumb_index in 1..@thumb_images
+                  name_thumb_image = asset_path("#{@name_id}_thumb#{thumb_index}.jpg")
+              %>
+              <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
+                <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
+              </li>
+              <%
+                end
+              %>
+
+              </ul>
+            </div>
+            <ul class="flex-direction-nav">
+              <li class="flex-nav-prev">
+                <a class="flex-prev" href="#"></a>
+              </li>
+              <li class="flex-nav-next">
+                <a class="flex-next" href="#"></a>
+              </li>
+            </ul>
+          </div> <!-- /.thumb-flex-slider -->
+        </div><!-- /.row -->
+        <script>
+          // $(window).on('load', function()
+          // {
+          //    jQuery('.thumb-flex-slider').show();
+          //    themo_start_thumb_slider('#themo_thumb_slider_1_inner');
+          // });
+        </script>
+    </div><!-- /.container -->
+  </section>
+</div>

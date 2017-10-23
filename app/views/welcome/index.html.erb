@@ -3,203 +3,34 @@
 
 </head>
 <body>
-  <%
-    place = Place.find_by(:name_id => "finca")
-    name_id =place.name_id
-    name = place.name
-    location = place.location_name
-    image_url = asset_path("#{name_id}_slider1.jpg")
 
-    description = place.description
-    video = place.video_url
-    thumb_images = place.max_thumb_images
-    rooms = place.rooms.all
-    tours = place.tours.all
-  %>
+ <%
+  @place = Place.find_by(:name_id => "finca")
+  @name_id =@place.name_id
+  @name = @place.name
+  @location = @place.location_name
+  @image_url = asset_path("#{@name_id}_slider1.jpg")
 
+  @description = @place.description
+  @video = @place.video_url
+  @thumb_images = @place.max_thumb_images
+  @rooms = @place.rooms.all
+  @tours = @place.tours.all
+ %>
 
-  <div id="home-slider">
-    <style scoped="">#main-flex-slider .themo_slider_0{padding-top:295px ; padding-bottom:290px }
-    </style>
-    <div id="main-flex-slider" class="flexslider" style="height: 971px;">
-      <ul class="slides">
-        <li class="flex-active-slide" style="width: 100%;float: left;margin-right: -100%;position: relative;opacity: 1;display: block;z-index: 2;">
-          <div class="slider-bg slide-cal-center light-text themo_slider_0" style="background-image: url(<%= image_url %>);padding-top: 429px;">
-            <div class="container">
-              <div class="row ">
-                <div class="slider-content col-sm-6">
-                  <h1 class="slider-title"><%=name%></h1>
-                  <div class="slider-subtitle ">
-                    <p><%=location%></p>
-                  </div>
-                  <div class="page-title-button ">
-                    <a href="" target="_blank" class="btn btn-ghost   th-btn">Reservar</a>
-                  </div>
-                </div>
-              </div><!-- /.row -->
-            </div><!-- /.container -->
-          </div><!-- /.slider-bg -->
-        </li>
-      </ul>
-      <a href="#the-chalet" target="_self" class="slider-scroll-down th-icon th-i-down">
-      </a>
-      <ul class="flex-direction-nav">
-        <li class="flex-nav-prev">
-          <a class="flex-prev flex-disabled" href="#" tabindex="-1"></a>
-        </li>
-        <li class="flex-nav-next">
-          <a class="flex-next flex-disabled" href="#" tabindex="-1"></a>
-        </li>
-      </ul>
-    </div><!-- /.main-flex-slider -->
-  </div>
-  <div id="wild-beauty">
-    <section id="themo_html_3" class=" content-editor ">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-6">
-                <h2>Hotel <%=name%></h2>
-                <p><%=description%></p>
-              </div>
-              <div class="col-md-6">
-
-
-
-
-
-                <p>
-                  <iframe src= '<%=video%>' width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><!-- /.container -->
-    </section>
-  </div>
-  <div>
-    <section id="themo_thumb_slider_1" class=" thumb-slider ">
-      <div class="container">
-        <div class="row">
-          <div id="themo_thumb_slider_1_inner" class="thumb-flex-slider flexslider flex-landscape col-xs-12"><!-- /.slides -->
-            <div class="flex-viewport" style="overflow: hidden; position: relative;">
-              <ul class="slides gallery" style="width: 1000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
-
-                <%
-                  for thumb_index in 1..thumb_images
-                    name_thumb_image = asset_path("#{name_id}_thumb#{thumb_index}.jpg")
-                %>
-                <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
-                  <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
-                </li>
-                <%
-                  end
-                %>
-
-                </ul>
-              </div>
-              <ul class="flex-direction-nav">
-                <li class="flex-nav-prev">
-                  <a class="flex-prev" href="#"></a>
-                </li>
-                <li class="flex-nav-next">
-                  <a class="flex-next" href="#"></a>
-                </li>
-              </ul>
-            </div> <!-- /.thumb-flex-slider -->
-          </div><!-- /.row -->
-          <script>
-            // $(window).on('load', function()
-            // {
-				    //    jQuery('.thumb-flex-slider').show();
-            //    themo_start_thumb_slider('#themo_thumb_slider_1_inner');
-			      // });
-          </script>
-			</div><!-- /.container -->
-    </section>
-  </div>
+  <%= render 'sections/slider' %>
+  <%= render 'sections/videofotos' %>
+  <%= render 'sections/rooms' %>
 
   <style scoped="">
   section#themo_rooms_1{padding-top:75px; padding-bottom:75px}
   </style>
 
-  <div id="rooms">
-    <section id="themo_rooms_1" class=" rooms ">
-      <div class="container">
-        <div class="row">
-          <div class="section-header col-xs-12 centered">
-            <h2>Cuartos</h2>
-            <p>Escoje tu cuarto favorito</p>
-          </div>
-        </div><!-- /.row -->
-        <%
-          rooms.each do |room|
-            room_name = room.name
-            room_description = room.description
-            room_image_url = asset_path("#{name_id}_room_thumb_#{room_name}.jpg")
-        %>
-        <div id="themo_rooms_1-post-1371" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1371 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
-          <div class="room-wrap">
-            <img width="380" height="380" src='<%=room_image_url%>' class="img-responsive room-img wp-post-image" alt=""  sizes="(max-width: 380px) 100vw, 380px">
-            <div class="room-overlay">
-            </div>
-            <div class="room-inner" style="height: 313px;">
-              <div class="room-center" style="visibility: visible;">
-                <h3 class="room-title">Saturno</h3>
-                <div class="pricing-cost">
-                  <%=room_description%>
-                </div>
-              </div><!-- /.room-center -->
-              <a class="room-link" href="#"></a>
-            </div><!-- /.room-inner -->
-          </div><!-- /.room-wrap -->
-        </div><!-- /.col-md -->
-        <%end%>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section>
-
-  <div id="Packetes">
-    <section id="themo_featured_1" class=" features ">
-      <div class="container">
-        <div class="features-inner">
-          <div class="row">
-            <div class="section-header col-xs-12 centered">
-              <h2>Paquetes</h2>
-              <p>Escoje uno de nuestros paquetes</p>
-            </div><!-- /.section-header -->
-          </div><!-- /.row -->
-          <div class="row">
-            <%
-            tours.each do |tour|
-              tour_name_id = tour.name_id
-              tour_title = tour.title
-              tour_description = tour.description
-              tour_image = asset_path("#{name_id}_tour_thumb_#{tour_name_id}.jpg")
-            %>
-
-            <div class="col-md-6">
-              <div class="feature-block">
-                <img width="555" height="290" src='<%=tour_image%>' class="feature-img-1 wp-post-image" alt="">
-                <h3 class="feature-title-1"><%=tour_title%></h3>
-                <div class="feature-text-1">
-                  <p><%=tour_description%></p>
-                </div>
-
-              </div><!-- /.feature-block -->
-            </div><!-- /.col-md-6 -->
-            <%end%>
-
-          </div><!--/row-->
+  <%= render 'sections/fotosdescription' %>
 
 
 
-        </div>
-      </div><!-- /.container -->
-    </section>
-  </div>
+
 
 </div>
 

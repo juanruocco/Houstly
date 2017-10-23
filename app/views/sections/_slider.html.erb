@@ -1,0 +1,39 @@
+
+
+
+
+<div id="home-slider">
+  <style scoped="">#main-flex-slider .themo_slider_0{padding-top:295px ; padding-bottom:290px }
+  </style>
+  <div id="main-flex-slider" class="flexslider" style="height: 971px;">
+    <ul class="slides">
+      <li class="flex-active-slide" style="width: 100%;float: left;margin-right: -100%;position: relative;opacity: 1;display: block;z-index: 2;">
+        <div class="slider-bg slide-cal-center light-text themo_slider_0" style="background-image: url(<%= @image_url %>);padding-top: 429px;">
+          <div class="container">
+            <div class="row ">
+              <div class="slider-content col-sm-6">
+                <h1 class="slider-title"><%=@name%></h1>
+                <div class="slider-subtitle ">
+                  <p><%=@location%></p>
+                </div>
+                <div class="page-title-button ">
+                  <a href="" target="_blank" class="btn btn-ghost   th-btn">Reservar</a>
+                </div>
+              </div>
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slider-bg -->
+      </li>
+    </ul>
+    <a href="#the-chalet" target="_self" class="slider-scroll-down th-icon th-i-down">
+    </a>
+    <ul class="flex-direction-nav">
+      <li class="flex-nav-prev">
+        <a class="flex-prev flex-disabled" href="#" tabindex="-1"></a>
+      </li>
+      <li class="flex-nav-next">
+        <a class="flex-next flex-disabled" href="#" tabindex="-1"></a>
+      </li>
+    </ul>
+  </div><!-- /.main-flex-slider -->
+</div>
