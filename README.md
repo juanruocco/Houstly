@@ -19,9 +19,7 @@ Se inicializa el proyecto en el archivo app/controllers/application_controller.r
   
 
 Para configurar hay que crear los siguientes modelos:
-1. place
-2. rooms
-3. tours
+place,rooms,tours
 
 Places (localhost:3000/places)
 hay que crear los siguientes campos
