@@ -23,7 +23,7 @@ Para configurar hay que crear los siguientes modelos:
 2. rooms
 3. tours
 
-1. place (localhost:3000/places)
+Places (localhost:3000/places)
 hay que crear los siguientes campos
 id:finca/psygon	(quemado para que coja las imagenes)
 name:cualquier valor
@@ -33,12 +33,12 @@ video: (cualquier valor) https://www.youtube.com/embed/0fpL7OzKP5w?rel=0&amp;con
 Number Sliders Images:1(valor quemado para las images)	
 Number Thumb Images: 5 (quemado para las imagenes)
 
-2. rooms (localhost:3000/rooms)
+Rooms (localhost:3000/rooms)
 hay que crear los siguientes campos:
 id:(valores quemado por las fotos), valores: venus, saturno,mercurio)
 name:(cualquier valor)
 
-3. tours (localhsot:3000/tours)
+Tours (localhsot:3000/tours)
 name:valores quemadospara las fotos(caballos,rafting,noche_romantica)
 title:cualquier valor
 description:cualquier valor
