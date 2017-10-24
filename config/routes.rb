@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get  '/psygon' => 'psygon#index'
+
   post '/tours' => 'tours#create'
   get  '/tours' => 'tours#new'
 
