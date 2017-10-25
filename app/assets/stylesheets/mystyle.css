@@ -137,3 +137,99 @@ img {
     -moz-transition: all .3s ease;
     transition: all .3s ease;
 }
+
+
+/* HEADER */
+
+/*.headhesive--clone.dark-header {
+    background-color: #252b2d !important;
+}*/
+
+
+.banner[data-transparent-header="true"] {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    overflow: visible !important;
+    z-index: 9998;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    border-bottom: 0;
+}
+
+.banner[data-transparent-header="true"] #logo .logo-main {
+    display: none;
+}
+
+#logo {
+    float: left;
+    display: block;
+    margin: 25px 0;
+}
+
+.navbar .navbar-nav {
+    float: right;
+    text-align: right;
+    margin: 12px 0 0 0;
+}
+
+header.dark-header .navbar-nav > li > a, header.dark-header .navbar-nav > li > a:hover, .headhesive--clone.dark-header .navbar-nav > li > a, .headhesive--clone.dark-header .navbar-nav > li > a:hover {
+    color: #fff !important;
+}
+
+
+/* HEADER */
+.top-nav-icon-blocks .icon-block {
+    display: inline-block;
+    padding: 0 10px;
+    text-align: right;
+}
+
+.top-nav-text {
+    float: left;
+}
+
+
+header.dark-header .top-nav-text p, header.dark-header .top-nav-icon-blocks .icon-block a
+{
+    color: #fff !important;
+}
+
+.top-nav-icon-blocks {
+    float: right;
+}
+
+.top-nav {
+    padding: 8px 0;
+}
+
+.banner[data-transparent-header="true"] .top-nav {
+    background: rgba(255,255,255,0.1);
+}
+
+.top-nav-icon-blocks .icon-block p, .top-nav-icon-blocks .icon-block a, .top-nav-text p, .top-nav-text a {
+    font-size: 12px;
+    line-height: 150%;
+    margin: 0;
+    color: #828282;
+}
+
+.glyphicons {
+    font-family: 'Glyphicons Regular';
+}
+
+.social {
+    font-family: 'Glyphicons Social Regular';
+}
+
+.social-facebook:before {
+    content: "\E031";
+}
+
+span.icon {
+  font-family: 'Glyphicons Regular';
+}

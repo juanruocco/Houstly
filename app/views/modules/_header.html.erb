@@ -1,0 +1,70 @@
+<header class="banner navbar navbar-default navbar-static-top dark-header" role="banner" data-transparent-header="true">
+  <div class="top-nav">
+    <div class="container">
+      <div class="row col-md-12">
+        <div class="top-nav-text">
+          <p>Bienvenidos a <%=@name%></p>
+        </div>
+        <div class="top-nav-icon-blocks">
+          <div class="icon-block">
+            <p>
+              <a href="mailto:mail@maill.com">
+                <i class="glyphicons glyphicons-envelope"></i>
+                <span>mail@mail.com</span>
+              </a>
+            </p>
+          </div>
+          <div class="icon-block">
+            <p>
+              <a href="#">
+                <i class="glyphicons glyphicons-google-maps"></i>
+                <span>Estamos en</span>
+              </a>
+            </p>
+          </div>
+          <div class="icon-block">
+            <p>
+              <a href="tel:+1%20111%201111%20111">
+                <i class="glyphicons glyphicons-iphone"></i>
+                <span>+1 11111111</span>
+              </a>
+            </p>
+          </div>
+          <div class="icon-block">
+            <p>
+              <a href="https://www.facebook.com/PsygonSurfCamp">
+                <i class="social social-facebook"></i>
+                <span></span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <div id="logo">
+          <a href="./">
+
+          <img class="logo-trans logo-reg" src="<%=asset_path('psygon_logo.png')%>" height="48" width="100" alt="Hotel Finca El Cielo">
+          <img class="logo-main logo-reg" src="<%=asset_path('psygon_logo.png')%>" height="48" width="50" alt="Hotel Finca El Cielo">
+          </a>
+      </div>
+   </div>
+   <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul id="menu-primary-navigation" class="nav navbar-nav">
+         <li class="menu-cuartos"><a href="#rooms">Cuartos</a></li>
+         <li class="menu-paquetes"><a href="#tours">Excursiones</a></li>
+         <li class="menu-reservar"><a href="#">Reservar</a></li>
+     </ul>
+   </nav>
+ </div>
+</header>

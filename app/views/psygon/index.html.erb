@@ -18,15 +18,18 @@
   @tours = @place.tours.all
  %>
 
-  <%= render 'sections/slider' %>
-  <%= render 'sections/videofotos' %>
-  <%= render 'sections/rooms' %>
+
+
+  <%= render 'modules/header' %>
+  <%= render 'modules/slider' %>
+  <%= render 'modules/videofotos' %>
+  <%= render 'modules/rooms' %>
 
   <style scoped="">
   section#themo_rooms_1{padding-top:75px; padding-bottom:75px}
   </style>
 
-  <%= render 'sections/fotosdescription' %>
+  <%= render 'modules/fotosdescription' %>
 
 
 
