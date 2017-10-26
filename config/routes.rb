@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  get 'psygon/index'
-
   resources :rooms, :tours, :places
+
+  get '/:id', to: 'welcome#index'
 
   root 'welcome#index'
 
-  get  '/psygon' => 'psygon#index'
 
   post '/tours' => 'tours#create'
   get  '/tours' => 'tours#new'

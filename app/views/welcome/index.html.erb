@@ -5,7 +5,11 @@
 <body>
 
  <%
-  @place = Place.find_by(:name_id => "finca")
+  @placeId = "finca"
+  if Place.where(:name_id => params[:id]).present?
+    @placeId = params[:id]
+  end
+  @place = Place.find_by(:name_id => @placeId)
   @name_id =@place.name_id
   @name = @place.name
   @location = @place.location_name
@@ -18,6 +22,9 @@
   @tours = @place.tours.all
  %>
 
+
+
+  <%= render 'modules/header' %>
   <%= render 'modules/slider' %>
   <%= render 'modules/videofotos' %>
   <%= render 'modules/rooms' %>
