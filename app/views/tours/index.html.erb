@@ -2,15 +2,24 @@
 
 <%= render "form" %>
 
-
+<br>
 <table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
     <%
     tours = current_place.tours
     tours.each do |tour| %>
     <tr>
       <td>
         <%= tour.name_id %>
+      </td>
+      <td>
         <%= tour.title %>
+      </td>
+      <td>
         <%= tour.description %>
       </td>
 
@@ -21,3 +30,5 @@
     </tr>
     <% end %>
 </table>
+<br>
+<%= link_to 'Places', places_path %>

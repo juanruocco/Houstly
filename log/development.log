@@ -49944,3 +49944,2775 @@ MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000469s
 Completed 200 OK in 50ms (Views: 47.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-24 21:27:59 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.023744s
+  Rendered welcome/index.html.erb within layouts/application (369.2ms)
+Completed 500 Internal Server Error in 472ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document not found for class Place with attributes {:name_id=>"finca"}.
+summary:
+  When calling Place.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  
+app/views/welcome/index.html.erb:7:in `_app_views_welcome_index_html_erb__1021512572_46639464'
+Started GET "/" for 127.0.0.1 at 2017-10-24 21:55:42 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.013606s
+  Rendered welcome/index.html.erb within layouts/application (95.4ms)
+Completed 500 Internal Server Error in 187ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document not found for class Place with attributes {:name_id=>"finca"}.
+summary:
+  When calling Place.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  
+app/views/welcome/index.html.erb:7:in `_app_views_welcome_index_html_erb___210442651_20393892'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 21:55:54 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (158.8ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003035s
+  Rendered places/index.html.erb within layouts/application (182.9ms)
+Completed 500 Internal Server Error in 3585ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    4:     <title>Hotel</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__857024820_32808720'
+Started GET "/" for 127.0.0.1 at 2017-10-24 21:59:43 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000498s
+  Rendered welcome/index.html.erb within layouts/application (22.7ms)
+Completed 500 Internal Server Error in 135ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document not found for class Place with attributes {:name_id=>"finca"}.
+summary:
+  When calling Place.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  
+app/views/welcome/index.html.erb:7:in `_app_views_welcome_index_html_erb___210442651_49629936'
+MONGODB | Se ha forzado la interrupción de una conexión existente por el host remoto.
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'unknown'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:02:51 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+  Rendered welcome/index.html.erb within layouts/application (31783.4ms)
+Completed 500 Internal Server Error in 31905ms
+
+
+  
+ActionView::Template::Error (No server is available matching preference: #<Mongo::ServerSelector::Primary:0x46789368 tag_sets=[] max_staleness=nil> using server_selection_timeout=30 and local_threshold=0.015):
+    4: </head>
+    5: <body>
+    6:   <%
+    7:     place = Place.find_by(:name_id => "finca")
+    8:     name_id =place.name_id
+    9:     name = place.name
+   10:     location = place.location_name
+  
+app/views/welcome/index.html.erb:7:in `_app_views_welcome_index_html_erb___84941203_32311632'
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:03:43 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.014736s
+  Rendered welcome/index.html.erb within layouts/application (68.9ms)
+Completed 500 Internal Server Error in 154ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document not found for class Place with attributes {:name_id=>"finca"}.
+summary:
+  When calling Place.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  
+app/views/welcome/index.html.erb:7:in `_app_views_welcome_index_html_erb___84941203_35593068'
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:05:21 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered welcome/index.html.erb within layouts/application (45.6ms)
+Completed 500 Internal Server Error in 144ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document not found for class Place with attributes {:name_id=>"finca"}.
+summary:
+  When calling Place.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  
+app/views/welcome/index.html.erb:7:in `_app_views_welcome_index_html_erb___84941203_88451100'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 22:05:39 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (13.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered places/index.html.erb within layouts/application (35.6ms)
+Completed 500 Internal Server Error in 1209ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    4:     <title>Hotel</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1033203170_35736600'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 22:08:08 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.5ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001139s
+  Rendered places/index.html.erb within layouts/application (26.5ms)
+Completed 500 Internal Server Error in 518ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    4:     <title>Hotel</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    8:   </head>
+    9: 
+   10:   <body>
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1033203170_57731856'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 22:08:27 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003959s
+  Rendered places/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 107ms (Views: 86.1ms)
+
+
+Started POST "/places" for 127.0.0.1 at 2017-10-24 22:12:12 -0500
+Processing by PlacesController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"VSV8pn64hE0vouXWyqnUgNVszAbA/Ov+nVux2RukMozN53pJKs8JgzeY4vVici2vBO+Fw1MfInQLoPOFZEVShQ==", "place"=>{"name_id"=>"finca/psygon", "name"=>"Finca Sygon", "description"=>"Finca Sygon ubicada en el centro del pais y cerca de los mas atractivos lugares turisticos", "location_name"=>"Centro del pais", "video_url"=>"https://www.youtube.com/embed/0fpL7OzKP5w?rel=0&amp;controls=0&amp;showinfo=0 ", "max_slider_images"=>"1", "max_thumb_images"=>"5"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627'), "name_id"=>"finca/psygon", "name"=>"Finca Sygon", "description"=>"Finca Sygon ubicada en el centro del pais y cerca de los mas atractivos lugares turisticos", "loca...
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.171725s
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.1ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.052857s
+  Rendered places/index.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 327ms (Views: 138.2ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-24 22:12:49 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.024065s
+  Rendered rooms/index.html.erb within layouts/application (77.2ms)
+Completed 500 Internal Server Error in 190ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document not found for class Place with attributes {:name_id=>"finca"}.
+summary:
+  When calling Place.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  
+app/controllers/application_controller.rb:5:in `current_place'
+app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb___702305321_111676764'
+Started PATCH "/places/59f0010cfd76b822c49a5627" for 127.0.0.1 at 2017-10-24 22:13:45 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"mVDHv+zWA3GXUTd+JXIG8PWa23L8Fpvj0etxxY3amyAmeCntCkVT96F0LCZih9105rTCtZsyhhHABQWKelZn3A==", "place"=>{"name_id"=>"finca", "name"=>"Finca Sygon 2", "description"=>"Finca Sygon ubicada en el centro del pais y cerca de los mas atractivos lugares turisticos", "location_name"=>"Centro del pais", "video_url"=>"https://www.youtube.com/embed/0fpL7OzKP5w?rel=0&amp;controls=0&amp;showinfo=0 ", "max_slider_images"=>"1", "max_thumb_images"=>"5"}, "commit"=>"Submit", "id"=>"59f0010cfd76b822c49a5627"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000978s
+MONGODB | localhost:27017 | hotel_development.update | STARTED | {"update"=>"places", "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}, "u"=>{"$set"=>{"name_id"=>"finca", "name"=>"Finca Sygon 2"}}, "multi"=>false, "upsert"=>false}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.update | SUCCEEDED | 0.054045s
+Redirected to http://localhost:3000/places
+Completed 302 Found in 62ms
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-24 22:13:45 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (7.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003024s
+  Rendered places/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 112ms (Views: 90.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-24 22:13:59 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00226s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+  Rendered rooms/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 126ms (Views: 99.2ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at 2017-10-24 22:14:22 -0500
+Processing by RoomsController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"vjSp6Q2/19mDjaHM4L0bFdps59K9Gvin4o7iBC5faQWJOU3xqM9XmfDkrtu5Xk2tVDCbYdRj1eZH+LtV8iUh5Q==", "room"=>{"name"=>"venus", "description"=>"cuarto venus"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"rooms", "documents"=>[{"_id"=>BSON::ObjectId('59f0018efd76b822c49a5628'), "name"=>"venus", "description"=>"cuarto venus", "place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.201274s
+Redirected to http://localhost:3000/rooms
+Completed 302 Found in 211ms
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-24 22:14:23 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002053s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered rooms/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 129ms (Views: 84.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at 2017-10-24 22:14:41 -0500
+Processing by RoomsController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"yyPWzsTMZyjKZ4Wt0CEIHSG8S+L4ug6DfkbhyP3Mbxz8LjLWYbznaLkOirqJwl6lr+A3UZHDI8LbMLiZIbYn/A==", "room"=>{"name"=>"saturno", "description"=>"cuarto saturno"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000646s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"rooms", "documents"=>[{"_id"=>BSON::ObjectId('59f001a1fd76b822c49a5629'), "name"=>"saturno", "description"=>"cuarto saturno", "place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.001006s
+Redirected to http://localhost:3000/rooms
+Completed 302 Found in 8ms
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-24 22:14:41 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003037s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000626s
+  Rendered rooms/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 106ms (Views: 85.7ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-24 22:14:58 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (3.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002006s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered tours/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 185ms (Views: 151.5ms)
+
+
+Started POST "/tours" for 127.0.0.1 at 2017-10-24 22:15:43 -0500
+Processing by ToursController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"OLMT2P4rKZko+2UodFX1nMmXNHXH1qdeib/dgeL8yqIpA7yOGT4gMOXgSoeOqNriTPQySosPTb2Tnsk1zagrrQ==", "tour"=>{"name_id"=>"caballos", "title"=>"Cabalgata ", "description"=>"Cabalgata por los sitios utirstiocs y por el campo"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000528s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"tours", "documents"=>[{"_id"=>BSON::ObjectId('59f001dffd76b822c49a562a'), "name_id"=>"caballos", "title"=>"Cabalgata ", "description"=>"Cabalgata por los sitios utirstiocs y por el campo", "place_id"=>BSON::ObjectId('59f0010cfd76b822c49a56...
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.12842s
+Redirected to http://localhost:3000/tours
+Completed 302 Found in 134ms
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-24 22:15:43 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002035s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001031s
+  Rendered tours/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 111ms (Views: 88.2ms)
+
+
+Started POST "/tours" for 127.0.0.1 at 2017-10-24 22:16:14 -0500
+Processing by ToursController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"CrKrEw2p5/S3bm4ZsCRagNA7EoOCWDRZSu/H8g8n4K0bAgRF6rzuXXp1QbZK2XX+VVgUvM6B3rpQztNGIHMBog==", "tour"=>{"name_id"=>"rafting", "title"=>"Rafting por rio guazu", "description"=>"actividad extrema en el rio guazu"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000577s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"tours", "documents"=>[{"_id"=>BSON::ObjectId('59f001fefd76b822c49a562b'), "name_id"=>"rafting", "title"=>"Rafting por rio guazu", "description"=>"actividad extrema en el rio guazu", "place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}],...
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.000503s
+Redirected to http://localhost:3000/tours
+Completed 302 Found in 9ms
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-24 22:16:14 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002079s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000997s
+  Rendered tours/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 109ms (Views: 88.8ms)
+
+
+Started POST "/tours" for 127.0.0.1 at 2017-10-24 22:16:59 -0500
+Processing by ToursController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"jnJ1BnLofq+0RjDnxxoiu88r1IS7wrlbt4RbmTnxhCGfwtpQlf13BnldH0g95w3FSkjSu/cbU7itpU8tFqVlLg==", "tour"=>{"name_id"=>"noche_romantica", "title"=>"noche romantica", "description"=>"noche romantica con cena y cama llena de petalos de rosa"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000504s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"tours", "documents"=>[{"_id"=>BSON::ObjectId('59f0022bfd76b822c49a562c'), "name_id"=>"noche_romantica", "title"=>"noche romantica", "description"=>"noche romantica con cena y cama llena de petalos de rosa", "place_id"=>BSON::ObjectId('59f0...
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.001513s
+Redirected to http://localhost:3000/tours
+Completed 302 Found in 8ms
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-24 22:16:59 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003036s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered tours/index.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 133ms (Views: 112.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:17:12 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered welcome/index.html.erb within layouts/application (490.8ms)
+Completed 500 Internal Server Error in 567ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb___84941203_46154496'
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:18:42 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000987s
+  Rendered welcome/index.html.erb within layouts/application (499.7ms)
+Completed 500 Internal Server Error in 577ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb___84941203_88192068'
+Started GET "/places/59f0010cfd76b822c49a5627/edit" for 127.0.0.1 at 2017-10-24 22:19:15 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0010cfd76b822c49a5627"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001534s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+  Rendered places/edit.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 105ms (Views: 78.3ms)
+
+
+Started PATCH "/places/59f0010cfd76b822c49a5627" for 127.0.0.1 at 2017-10-24 22:19:20 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"ngbhtPusi8QjJ+8iJCOy2D1f0ozS7mPKO7yrEJaBlB0hLg/mHT/bQhUC9Hpj1mlcLnHLS7XKfjgqUt9fYQ1o4Q==", "place"=>{"name_id"=>"finca", "name"=>"Finca Sygon 2", "description"=>"Finca Sygon ubicada en el centro del pais y cerca de los mas atractivos lugares turisticos", "location_name"=>"Centro del pais", "video_url"=>"https://www.youtube.com/embed/0fpL7OzKP5w?rel=0&amp;controls=0&amp;showinfo=0 ", "max_slider_images"=>"1", "max_thumb_images"=>"5"}, "commit"=>"Submit", "id"=>"59f0010cfd76b822c49a5627"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000976s
+Redirected to http://localhost:3000/places
+Completed 302 Found in 6ms
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-24 22:19:20 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003019s
+  Rendered places/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 105ms (Views: 84.1ms)
+
+
+Started DELETE "/places/59f0010cfd76b822c49a5627" for 127.0.0.1 at 2017-10-24 22:19:25 -0500
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U8X4KjDFdpgxDet20pRLh1/3mk7MRslMnfnYWMo4GuC9UkLjHJlH8XwmtcQSFSDAUPidoskF+5SXa/oZjM9W/g==", "id"=>"59f0010cfd76b822c49a5627"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000979s
+MONGODB | localhost:27017 | hotel_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('59f0010cfd76b822c49a5627')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.delete | SUCCEEDED | 0.032686s
+Redirected to http://localhost:3000/places
+Completed 302 Found in 38ms
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-24 22:19:25 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002482s
+  Rendered places/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 104ms (Views: 83.2ms)
+
+
+Started POST "/places" for 127.0.0.1 at 2017-10-24 22:20:43 -0500
+Processing by PlacesController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"w8jUUIRFZPLf980R11dpdWSjnykVyLejni1ueiJJb/5bCtK/0DLpPMfNyjJ/jJBatSDW7IYrfikI1iwmXagP9w==", "place"=>{"name_id"=>"finca", "name"=>"finca/psygon", "description"=>"Finca Sygon ubicada en el centro del pais y cerca de los mas atractivos lugares turisticos", "location_name"=>"Centro del pais", "video_url"=>"", "max_slider_images"=>"1", "max_thumb_images"=>"5"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d'), "name_id"=>"finca", "name"=>"finca/psygon", "description"=>"Finca Sygon ubicada en el centro del pais y cerca de los mas atractivos lugares turisticos", "location_n...
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.001003s
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.5ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002345s
+  Rendered places/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 89ms (Views: 83.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:20:49 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0s
+  Rendered welcome/index.html.erb within layouts/application (495.2ms)
+Completed 500 Internal Server Error in 573ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb___84941203_102233316'
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:27:26 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002003s
+  Rendered welcome/index.html.erb within layouts/application (461.6ms)
+Completed 500 Internal Server Error in 537ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("finca_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb___84941203_95137428'
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:28:16 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0015019999999999999s
+  Rendered welcome/index.html.erb within layouts/application (680.2ms)
+Completed 500 Internal Server Error in 758ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    89: 
+    90:                 <%
+    91:                   for thumb_index in 1..thumb_images
+    92:                     name_thumb_image = asset_path("#{name_id}_thumb#{thumb_index}.jpg")
+    93:                 %>
+    94:                 <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
+    95:                   <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
+  
+app/views/welcome/index.html.erb:92:in `block in _app_views_welcome_index_html_erb___84941203_100919544'
+app/views/welcome/index.html.erb:91:in `_app_views_welcome_index_html_erb___84941203_100919544'
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:41:22 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000502s
+  Rendered welcome/index.html.erb within layouts/application (485.2ms)
+Completed 500 Internal Server Error in 566ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    89: 
+    90:                 <%
+    91:                   for thumb_index in 1..thumb_images
+    92:                     name_thumb_image = asset_path("#{name_id}_thumb#{thumb_index}.jpg")
+    93:                 %>
+    94:                 <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
+    95:                   <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
+  
+app/views/welcome/index.html.erb:92:in `block in _app_views_welcome_index_html_erb___84941203_104417556'
+app/views/welcome/index.html.erb:91:in `_app_views_welcome_index_html_erb___84941203_104417556'
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:52:28 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000971s
+  Rendered welcome/index.html.erb within layouts/application (483.8ms)
+Completed 500 Internal Server Error in 566ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    89: 
+    90:                 <%
+    91:                   for thumb_index in 1..thumb_images
+    92:                     name_thumb_image = asset_path("#{name_id}_thumb#{thumb_index}.jpg")
+    93:                 %>
+    94:                 <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
+    95:                   <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
+  
+app/views/welcome/index.html.erb:92:in `block in _app_views_welcome_index_html_erb___84941203_89466456'
+app/views/welcome/index.html.erb:91:in `_app_views_welcome_index_html_erb___84941203_89466456'
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:55:51 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00091s
+  Rendered welcome/index.html.erb within layouts/application (508.7ms)
+Completed 500 Internal Server Error in 584ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    89: 
+    90:                 <%
+    91:                   for thumb_index in 1..thumb_images
+    92:                     name_thumb_image = asset_path("#{name_id}_thumb#{thumb_index}.jpg")
+    93:                 %>
+    94:                 <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
+    95:                   <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
+  
+app/views/welcome/index.html.erb:92:in `block in _app_views_welcome_index_html_erb___84941203_110781384'
+app/views/welcome/index.html.erb:91:in `_app_views_welcome_index_html_erb___84941203_110781384'
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:56:08 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001006s
+  Rendered welcome/index.html.erb within layouts/application (461.7ms)
+Completed 500 Internal Server Error in 571ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    89: 
+    90:                 <%
+    91:                   for thumb_index in 1..thumb_images
+    92:                     name_thumb_image = asset_path("#{name_id}_thumb#{thumb_index}.jpg")
+    93:                 %>
+    94:                 <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
+    95:                   <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
+  
+app/views/welcome/index.html.erb:92:in `block in _app_views_welcome_index_html_erb___84941203_99536136'
+app/views/welcome/index.html.erb:91:in `_app_views_welcome_index_html_erb___84941203_99536136'
+Started POST "/rooms" for 127.0.0.1 at 2017-10-24 22:56:42 -0500
+Processing by RoomsController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"ljP5aWkAvqzxsHhR7aULOtGYM5DWdRrkhjrGaLvB6iyhPh1xzHA+7ILZd0a0Rl2CX8RPI78MN6UjTJ85Z7uizA==", "room"=>{"name"=>"mercurio", "description"=>"cuarto mercurio"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002008s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"rooms", "documents"=>[{"_id"=>BSON::ObjectId('59f00b7afd76b822c49a562e'), "name"=>"mercurio", "description"=>"cuarto mercurio", "place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.002021s
+Redirected to http://localhost:3000/rooms
+Completed 302 Found in 11ms
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-24 22:56:42 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003006s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered rooms/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 107ms (Views: 86.0ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at 2017-10-24 22:57:04 -0500
+Processing by RoomsController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"Z/kHlbtIOYfXMdGuG/ljszWX8HDnaSFX+3LLokCkW0lQ9OONHji5x6RY3rlCGjULu8uMw44QDBZeBJLznN4TqQ==", "room"=>{"name"=>"venus", "description"=>"cuarto venus"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000976s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"rooms", "documents"=>[{"_id"=>BSON::ObjectId('59f00b90fd76b822c49a562f'), "name"=>"venus", "description"=>"cuarto venus", "place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.002004s
+Redirected to http://localhost:3000/rooms
+Completed 302 Found in 8ms
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-24 22:57:04 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002714s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000992s
+  Rendered rooms/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 108ms (Views: 88.1ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at 2017-10-24 22:57:21 -0500
+Processing by RoomsController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"h69YeSh98zqTFUfXW9MqobaUpqOVKtv7n+X4GGxsH2eworxhjQ1zeuB8SMACMHwZOMjaEPxT9ro6k6FJsBZXhw==", "room"=>{"name"=>"saturno", "description"=>"cuarto saturno "}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000953s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"rooms", "documents"=>[{"_id"=>BSON::ObjectId('59f00ba1fd76b822c49a5630'), "name"=>"saturno", "description"=>"cuarto saturno ", "place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.0s
+Redirected to http://localhost:3000/rooms
+Completed 302 Found in 7ms
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-24 22:57:21 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002775s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001004s
+  Rendered rooms/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 105ms (Views: 85.4ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-24 22:57:32 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002166s
+  Rendered places/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 102ms (Views: 82.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:57:39 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+  Rendered welcome/index.html.erb within layouts/application (517.3ms)
+Completed 500 Internal Server Error in 604ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    89: 
+    90:                 <%
+    91:                   for thumb_index in 1..thumb_images
+    92:                     name_thumb_image = asset_path("#{name_id}_thumb#{thumb_index}.jpg")
+    93:                 %>
+    94:                 <li class="thumb-flex-slider-img-<%=thumb_index%>" style="width: 255px; float: left; display: block;">
+    95:                   <img width="255" height="170" src="<%=name_thumb_image%>" class="attachment-themo_thumb_slider size-themo_thumb_slider wp-post-image" alt=""  sizes="(max-width: 255px) 100vw, 255px" draggable="false" style="display: inline;">
+  
+app/views/welcome/index.html.erb:92:in `block in _app_views_welcome_index_html_erb___84941203_46188048'
+app/views/welcome/index.html.erb:91:in `_app_views_welcome_index_html_erb___84941203_46188048'
+Started GET "/" for 127.0.0.1 at 2017-10-24 22:59:06 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000977s
+  Rendered welcome/index.html.erb within layouts/application (455.6ms)
+Completed 500 Internal Server Error in 533ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb___84941203_57775476'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 22:59:48 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003005s
+  Rendered places/index.html.erb within layouts/application (27.1ms)
+Completed 500 Internal Server Error in 726ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    4:     <title>Hotel</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1033203170_109853724'
+Started GET "/" for 127.0.0.1 at 2017-10-24 23:02:59 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.012776s
+  Rendered welcome/index.html.erb within layouts/application (1339.0ms)
+Completed 500 Internal Server Error in 1430ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__799372494_44382660'
+Started GET "/" for 127.0.0.1 at 2017-10-24 23:05:44 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0s
+  Rendered welcome/index.html.erb within layouts/application (521.2ms)
+Completed 500 Internal Server Error in 597ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__799372494_107043324'
+Started GET "/" for 127.0.0.1 at 2017-10-24 23:07:19 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001s
+  Rendered welcome/index.html.erb within layouts/application (495.5ms)
+Completed 500 Internal Server Error in 577ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__799372494_98146680'
+Started GET "/" for 127.0.0.1 at 2017-10-24 23:07:30 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001006s
+  Rendered welcome/index.html.erb within layouts/application (534.8ms)
+Completed 500 Internal Server Error in 645ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__799372494_105130728'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 23:11:23 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (12.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003007s
+  Rendered places/index.html.erb within layouts/application (38.1ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002004s
+Completed 500 Internal Server Error in 579ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    14:         name_id =place.name_id
+    15:         name = place.name
+    16:         location = place.location_name
+    17:         image_url = asset_path("#{name_id}_slider1.jpg")
+    18:         %>
+    19:     </p>
+    20:   </body>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___947281893_58815732'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 23:11:48 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002015s
+  Rendered places/index.html.erb within layouts/application (33.1ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+Completed 200 OK in 143ms (Views: 121.4ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-24 23:13:02 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002057s
+  Rendered places/index.html.erb within layouts/application (27.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001978s
+Completed 200 OK in 108ms (Views: 87.5ms)
+
+
+Started GET "/finca_slider1.jpg" for 127.0.0.1 at 2017-10-24 23:13:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/finca_slider1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 23:13:29 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.5ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002987s
+  Rendered places/index.html.erb within layouts/application (26.6ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001424s
+Completed 200 OK in 106ms (Views: 84.6ms)
+
+
+Started GET "/finca_slider1.jpg" for 127.0.0.1 at 2017-10-24 23:13:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/finca_slider1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 23:13:51 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000794s
+  Rendered places/index.html.erb within layouts/application (25.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001005s
+Completed 200 OK in 111ms (Views: 87.2ms)
+
+
+Started GET "/finca_slider1.jpg" for 127.0.0.1 at 2017-10-24 23:13:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/finca_slider1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-24 23:26:14 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00097s
+  Rendered welcome/index.html.erb within layouts/application (466.6ms)
+Completed 500 Internal Server Error in 547ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__799372494_85616424'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 23:26:20 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003008s
+  Rendered places/index.html.erb within layouts/application (38.1ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002005s
+Completed 200 OK in 177ms (Views: 153.9ms)
+
+
+Started GET "/finca_slider1.jpg" for 127.0.0.1 at 2017-10-24 23:26:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/finca_slider1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/places" for 127.0.0.1 at 2017-10-24 23:26:37 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001035s
+  Rendered places/index.html.erb within layouts/application (28.1ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000668s
+Completed 200 OK in 113ms (Views: 89.7ms)
+
+
+Started GET "/finca_slider1.jpg" for 127.0.0.1 at 2017-10-24 23:26:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/finca_slider1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-24 23:26:49 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001004s
+  Rendered welcome/index.html.erb within layouts/application (484.7ms)
+Completed 500 Internal Server Error in 564ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__799372494_104933880'
+Started GET "/" for 127.0.0.1 at 2017-10-25 00:02:32 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001026s
+  Rendered welcome/index.html.erb within layouts/application (512.2ms)
+Completed 500 Internal Server Error in 593ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__799372494_89150532'
+Started GET "/places" for 127.0.0.1 at 2017-10-25 00:02:34 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (3.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.294865s
+  Rendered places/index.html.erb within layouts/application (664.6ms)
+Completed 500 Internal Server Error in 2854ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    2: <html>
+    3:   <head>
+    4:     <title>Hotel</title>
+    5:     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:     <%= csrf_meta_tags %>
+    8: 
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___947281893_105679740'
+Started GET "/places" for 127.0.0.1 at 2017-10-25 00:03:18 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002011s
+  Rendered places/index.html.erb within layouts/application (30.1ms)
+Completed 500 Internal Server Error in 671ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    2: <html>
+    3:   <head>
+    4:     <title>Hotel</title>
+    5:     <%= stylesheet_link_tag    "application.css", media: "all", "data-turbolinks-track" => true %>
+    6:     <%= javascript_include_tag "application.js", "data-turbolinks-track" => true %>
+    7:     <%= csrf_meta_tags %>
+    8: 
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___947281893_102444696'
+Started GET "/" for 127.0.0.1 at 2017-10-25 00:03:31 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered welcome/index.html.erb within layouts/application (495.2ms)
+Completed 500 Internal Server Error in 577ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__799372494_96219528'
+MONGODB | Se ha forzado la interrupción de una conexión existente por el host remoto.
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'unknown'.
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+Started GET "/" for 127.0.0.1 at 2017-10-25 21:21:46 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+  Rendered welcome/index.html.erb within layouts/application (31455.1ms)
+Completed 500 Internal Server Error in 31577ms
+
+
+  
+ActionView::Template::Error (No server is available matching preference: #<Mongo::ServerSelector::Primary:0x48913584 tag_sets=[] max_staleness=nil> using server_selection_timeout=30 and local_threshold=0.015):
+    4: </head>
+    5: <body>
+    6:   <%
+    7:     place = Place.find_by(:name_id => "finca")
+    8:     name_id =place.name_id
+    9:     name = place.name
+   10:     location = place.location_name
+  
+app/views/welcome/index.html.erb:7:in `_app_views_welcome_index_html_erb__1005310020_45366060'
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+Started GET "/places" for 127.0.0.1 at 2017-10-25 21:22:44 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (65.2ms)
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+  Rendered places/index.html.erb within layouts/application (30741.6ms)
+Completed 500 Internal Server Error in 30828ms
+
+
+  
+ActionView::Template::Error (No server is available matching preference: #<Mongo::ServerSelector::Primary:0x48907500 tag_sets=[] max_staleness=nil> using server_selection_timeout=30 and local_threshold=0.015):
+     5: <table>
+     6:   <%
+     7:   places = Place.all
+     8:   places.each do |place| %>
+     9:   <tr>
+    10:     <td><%= place.name_id %></td>
+    11:     <td><%= place.name %></td>
+  
+app/views/places/index.html.erb:8:in `_app_views_places_index_html_erb___812907909_90856224'
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+Started GET "/" for 127.0.0.1 at 2017-10-25 21:25:57 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.029847s
+  Rendered welcome/index.html.erb within layouts/application (2246.6ms)
+Completed 500 Internal Server Error in 2330ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__1005310020_91343448'
+Started GET "/places" for 127.0.0.1 at 2017-10-25 21:42:01 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003027s
+  Rendered places/index.html.erb within layouts/application (26.6ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001004s
+Completed 200 OK in 111ms (Views: 87.9ms)
+
+
+Started GET "/finca_slider1.jpg" for 127.0.0.1 at 2017-10-25 21:42:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/finca_slider1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 21:47:09 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.142443s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+  Rendered places/edit.html.erb within layouts/application (23.1ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001005s
+Completed 200 OK in 253ms (Views: 86.0ms)
+
+
+Started GET "/places/59f0030bfd76b822c49a562d/finca_slider1.jpg" for 127.0.0.1 at 2017-10-25 21:47:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/places/59f0030bfd76b822c49a562d/finca_slider1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 21:49:48 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+  Rendered places/edit.html.erb within layouts/application (23.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0s
+Completed 200 OK in 163ms (Views: 133.3ms)
+
+
+Started GET "/places/59f0030bfd76b822c49a562d/finca_slider1.jpg" for 127.0.0.1 at 2017-10-25 21:49:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/places/59f0030bfd76b822c49a562d/finca_slider1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 21:53:27 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001004s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (3.0ms)
+  Rendered places/edit.html.erb within layouts/application (25.1ms)
+Completed 500 Internal Server Error in 117ms
+
+
+  
+SyntaxError (C:/Users/Tomas/Documents/GitHub/Houstly/app/views/layouts/application.html.erb:19: unknown regexp options - ag
+C:/Users/Tomas/Documents/GitHub/Houstly/app/views/layouts/application.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+        //image_url = "#{name_id}_slider1.jpg"
+                   ^):
+  
+app/views/layouts/application.html.erb:19: unknown regexp options - ag
+app/views/layouts/application.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 21:57:58 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001479s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+  Rendered places/edit.html.erb within layouts/application (21.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000983s
+Completed 500 Internal Server Error in 125ms
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    18:         location = place.location_name
+    19:         #image_url = "#{name_id}_slider1.jpg"
+    20:         %>
+    21:         <%= image_url%>
+    22:     </p>
+    23:     <p>
+    24:     <div class="slider-bg slide-cal-center light-text themo_slider_0"
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb__621052701_112460472'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 21:59:12 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000994s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+  Rendered places/edit.html.erb within layouts/application (21.9ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000952s
+Completed 500 Internal Server Error in 560ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    17:         name = place.name
+    18:         location = place.location_name
+    19:         #image_url = "#{name_id}_slider1.jpg"
+    20:         image_url = asset_path("#{name_id}_slider1.jpg")
+    21:         %>
+    22:         <%= image_url%>
+    23:     </p>
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__621052701_109694616'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 22:28:18 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001006s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.5ms)
+  Rendered places/edit.html.erb within layouts/application (23.1ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000706s
+Completed 500 Internal Server Error in 569ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    17:         name = place.name
+    18:         location = place.location_name
+    19:         #image_url = "#{name_id}_slider1.jpg"
+    20:         image_url = asset_path("#{name_id}_slider1.jpg")
+    21:         %>
+    22:         <%= image_url%>
+    23:     </p>
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__621052701_95976252'
+Started GET "/" for 127.0.0.1 at 2017-10-25 22:35:53 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001537s
+  Rendered welcome/index.html.erb within layouts/application (484.0ms)
+Completed 500 Internal Server Error in 565ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__1005310020_105917016'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 22:36:04 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000997s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+  Rendered places/edit.html.erb within layouts/application (21.1ms)
+Completed 500 Internal Server Error in 129ms
+
+
+  
+ActionView::Template::Error (The asset "**application**.css" is not present in the asset pipeline.):
+    2: <html>
+    3:   <head>
+    4:     <title>Hotel</title>
+    5:     <%= stylesheet_link_tag    '**application**', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag '**application**', 'data-turbolinks-track' => true %>
+    7: 
+    8:     <%= csrf_meta_tags %>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__621052701_101853024'
+Started GET "/" for 127.0.0.1 at 2017-10-25 22:36:40 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001013s
+  Rendered welcome/index.html.erb within layouts/application (488.0ms)
+Completed 500 Internal Server Error in 601ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb__1005310020_47572212'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 22:36:54 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001005s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.5ms)
+  Rendered places/edit.html.erb within layouts/application (22.8ms)
+Completed 500 Internal Server Error in 129ms
+
+
+  
+ActionView::Template::Error (The asset "**default**.css" is not present in the asset pipeline.):
+    2: <html>
+    3:   <head>
+    4:     <title>Hotel</title>
+    5:     <%= stylesheet_link_tag    '**default**', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag '**default**', 'data-turbolinks-track' => true %>
+    7: 
+    8:     <%= csrf_meta_tags %>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__621052701_46233060'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 22:37:33 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.012034s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+  Rendered places/edit.html.erb within layouts/application (21.1ms)
+Completed 500 Internal Server Error in 135ms
+
+
+  
+ActionView::Template::Error (The asset "**application.css**.css" is not present in the asset pipeline.):
+    2: <html>
+    3:   <head>
+    4:     <title>Hotel</title>
+    5:     <%= stylesheet_link_tag    '**application.css**', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag '**application**', 'data-turbolinks-track' => true %>
+    7: 
+    8:     <%= csrf_meta_tags %>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__621052701_99501096'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 22:37:58 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+  Rendered places/edit.html.erb within layouts/application (21.1ms)
+Completed 500 Internal Server Error in 634ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+    2: <html>
+    3:   <head>
+    4:     <title>Hotel</title>
+    5:     <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag '**application**', 'data-turbolinks-track' => true %>
+    7: 
+    8:     <%= csrf_meta_tags %>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__621052701_111405312'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 22:38:59 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001987s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+  Rendered places/edit.html.erb within layouts/application (21.1ms)
+Completed 500 Internal Server Error in 126ms
+
+
+  
+ActionView::Template::Error (The asset "**application**.css" is not present in the asset pipeline.):
+    2: <html>
+    3:   <head>
+    4:     <title>Hotel</title>
+    5:     <%= stylesheet_link_tag    '**application**', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag '**application**', 'data-turbolinks-track' => true %>
+    7: 
+    8:     <%= csrf_meta_tags %>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__621052701_107067108'
+Started GET "/places/59f0030bfd76b822c49a562d/edit" for 127.0.0.1 at 2017-10-25 22:41:16 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"59f0030bfd76b822c49a562d"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00301s
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+  Rendered places/edit.html.erb within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 133ms
+
+
+  
+ActionView::Template::Error (The asset "**application**.css" is not present in the asset pipeline.):
+    2: <html>
+    3:   <head>
+    4:     <title>Hotel</title>
+    5:     <%= stylesheet_link_tag    '**application**', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag '**application**', 'data-turbolinks-track' => true %>
+    7: 
+    8:     <%= csrf_meta_tags %>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__621052701_110408628'
+MONGODB | Se ha forzado la interrupción de una conexión existente por el host remoto.
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'unknown'.
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+MONGODB | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. - connect(2) for 127.0.0.1:27017
+Started GET "/" for 127.0.0.1 at 2017-10-25 22:51:19 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.01206s
+  Rendered welcome/index.html.erb within layouts/application (1194.8ms)
+Completed 500 Internal Server Error in 1282ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb___925412046_46876596'
+Started GET "/" for 127.0.0.1 at 2017-10-25 22:52:46 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002004s
+  Rendered welcome/index.html.erb within layouts/application (461.7ms)
+Completed 500 Internal Server Error in 540ms
+
+
+  
+ActionView::Template::Error (TypeError: El objeto no acepta esta propiedad o mÃ©todo):
+     8:     name_id =place.name_id
+     9:     name = place.name
+    10:     location = place.location_name
+    11:     image_url = asset_path("#{name_id}_slider1.jpg")
+    12: 
+    13:     description = place.description
+    14:     video = place.video_url
+  
+app/views/welcome/index.html.erb:11:in `_app_views_welcome_index_html_erb___925412046_56582580'
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:00:22 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.088758s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000973s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0s
+  Rendered welcome/index.html.erb within layouts/application (7245.7ms)
+Completed 500 Internal Server Error in 7715ms
+
+
+  
+ActionView::Template::Error (The asset "**application**.css" is not present in the asset pipeline.):
+    2: <html>
+    3:   <head>
+    4:     <title>Hotel</title>
+    5:     <%= stylesheet_link_tag    '**application**', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag '**application**', 'data-turbolinks-track' => true %>
+    7: 
+    8:     <%= csrf_meta_tags %>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__191293163_45161724'
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:02:33 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001472s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered welcome/index.html.erb within layouts/application (34.1ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0s
+Completed 200 OK in 114ms (Views: 94.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:06:23 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000969s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+  Rendered welcome/index.html.erb within layouts/application (74.2ms)
+Completed 200 OK in 177ms (Views: 134.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:06:40 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00077s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001006s
+  Rendered welcome/index.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 109ms (Views: 89.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:08:59 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (60.6ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00207s
+  Rendered places/index.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 181ms (Views: 148.7ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:24:12 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003s
+  Rendered places/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 107ms (Views: 81.3ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:24:58 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (0.5ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002476s
+  Rendered places/index.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 127ms (Views: 105.3ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:28:09 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000993s
+  Rendered places/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 98ms (Views: 79.1ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:34:35 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003028s
+  Rendered places/index.html.erb within layouts/application (47.8ms)
+Completed 500 Internal Server Error in 130ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    37:     <th>Titulo</th>
+    38:     <th>Texto</th>
+    39:   </tr>
+    40:   <% @articulos.each do |articuloit|%>
+    41:     <tr>
+    42:       <td> <%= articuloit.titulo %> </td>
+    43:       <td> <%= articuloit.texto %> </td>
+  
+app/views/places/index.html.erb:40:in `_app_views_places_index_html_erb___376479919_92481216'
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:34:56 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003075s
+  Rendered places/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 107ms (Views: 86.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:35:15 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.5ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002802s
+  Rendered places/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 105ms (Views: 83.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:35:42 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+  Rendered places/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 103ms (Views: 82.6ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-25 23:36:09 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003022s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000998s
+  Rendered tours/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 127ms (Views: 87.8ms)
+
+
+Started POST "/tours" for 127.0.0.1 at 2017-10-25 23:40:19 -0500
+Processing by ToursController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"P9XROzfLBJc3pZhrq0jBK2tQCHcuC3CQ8ttvcSNSTVgc3axbqmcaLZcGE1ICzDyMQ2OCyPSLkRDI7iaUPBUpyg==", "tour"=>{"name_id"=>"Cabalgata", "title"=>"prueba cabalgata", "description"=>"pureba cabalgata"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000504s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"tours", "documents"=>[{"_id"=>BSON::ObjectId('59f16733fd76b827c07db8b7'), "name_id"=>"Cabalgata", "title"=>"prueba cabalgata", "description"=>"pureba cabalgata", "place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.116225s
+Redirected to http://localhost:3000/tours
+Completed 302 Found in 123ms
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-25 23:40:19 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001014s
+  Rendered tours/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 105ms (Views: 86.1ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:40:38 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003009s
+  Rendered places/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 103ms (Views: 82.1ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-25 23:40:52 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002936s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000557s
+  Rendered tours/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 105ms (Views: 85.4ms)
+
+
+Started POST "/tours" for 127.0.0.1 at 2017-10-25 23:41:47 -0500
+Processing by ToursController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"a7LQ9Rv/8WFWopdJPDUReQL1X+zJ6oFQ2k/BRXuc+MJIuq2VhlPv2/YBHHCVsezeKsbVUxNqYNDgeoigZNucUA==", "tour"=>{"name_id"=>"Rafting", "title"=>"raftin rio guazu", "description"=>"raftin por todo el rio guazi"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003009s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"tours", "documents"=>[{"_id"=>BSON::ObjectId('59f1678bfd76b827c07db8b8'), "name_id"=>"Rafting", "title"=>"raftin rio guazu", "description"=>"raftin por todo el rio guazi", "place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}], "ordered"...
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.001005s
+Redirected to http://localhost:3000/tours
+Completed 302 Found in 13ms
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-25 23:41:47 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003308s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+  Rendered tours/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 128ms (Views: 84.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:42:24 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001007s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001004s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001005s
+  Rendered welcome/index.html.erb within layouts/application (59.0ms)
+Completed 500 Internal Server Error in 135ms
+
+
+  
+ActionView::Template::Error (The asset "finca_tour_thumb_Cabalgata.jpg" is not present in the asset pipeline.):
+    177:               tour_name_id = tour.name_id
+    178:               tour_title = tour.title
+    179:               tour_description = tour.description
+    180:               tour_image = asset_path("#{name_id}_tour_thumb_#{tour_name_id}.jpg")
+    181:             %>
+    182: 
+    183:             <div class="col-md-6">
+  
+app/views/welcome/index.html.erb:180:in `block in _app_views_welcome_index_html_erb__476830943_58928424'
+app/views/welcome/index.html.erb:176:in `_app_views_welcome_index_html_erb__476830943_58928424'
+Started GET "/tours/59f16733fd76b827c07db8b7/edit" for 127.0.0.1 at 2017-10-25 23:45:24 -0500
+Processing by ToursController#edit as HTML
+  Parameters: {"id"=>"59f16733fd76b827c07db8b7"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"_id"=>BSON::ObjectId('59f16733fd76b827c07db8b7')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001005s
+  Rendering tours/edit.html.erb within layouts/application
+  Rendered tours/_form.html.erb (2.0ms)
+  Rendered tours/edit.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 109ms (Views: 79.8ms)
+
+
+Started PATCH "/tours/59f16733fd76b827c07db8b7" for 127.0.0.1 at 2017-10-25 23:45:43 -0500
+Processing by ToursController#update as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"dMhxwN/TPMvM0GJUE13tVFJjtKvnH4n4tpcfbZSR0KNvdaVrQb5Fh6+krichIDi6z6PSO/UN4TcQUYkr+tBCew==", "tour"=>{"name_id"=>"caballos", "title"=>"prueba cabalgata", "description"=>"pureba cabalgata"}, "commit"=>"Submit", "id"=>"59f16733fd76b827c07db8b7"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"_id"=>BSON::ObjectId('59f16733fd76b827c07db8b7')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00099s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.104995s
+MONGODB | localhost:27017 | hotel_development.update | STARTED | {"update"=>"tours", "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('59f16733fd76b827c07db8b7')}, "u"=>{"$set"=>{"name_id"=>"caballos"}}, "multi"=>false, "upsert"=>false}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.update | SUCCEEDED | 0.043749s
+Redirected to http://localhost:3000/tours
+Completed 302 Found in 158ms
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-25 23:45:43 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003008s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000985s
+  Rendered tours/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 106ms (Views: 85.0ms)
+
+
+Started GET "/tours/59f1678bfd76b827c07db8b8/edit" for 127.0.0.1 at 2017-10-25 23:45:55 -0500
+Processing by ToursController#edit as HTML
+  Parameters: {"id"=>"59f1678bfd76b827c07db8b8"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"_id"=>BSON::ObjectId('59f1678bfd76b827c07db8b8')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001005s
+  Rendering tours/edit.html.erb within layouts/application
+  Rendered tours/_form.html.erb (2.0ms)
+  Rendered tours/edit.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 103ms (Views: 79.6ms)
+
+
+Started PATCH "/tours/59f1678bfd76b827c07db8b8" for 127.0.0.1 at 2017-10-25 23:46:01 -0500
+Processing by ToursController#update as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"y16AZg1anb2FTitoxkxPf7oZLFzvjVNVZePjab1PqBspnJ5ysO8odIL8RgV73kMF13/3G83cf09EVARZSI7l7A==", "tour"=>{"name_id"=>"rafting", "title"=>"raftin rio guazu", "description"=>"raftin por todo el rio guazi"}, "commit"=>"Submit", "id"=>"59f1678bfd76b827c07db8b8"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"_id"=>BSON::ObjectId('59f1678bfd76b827c07db8b8')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000997s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002005s
+MONGODB | localhost:27017 | hotel_development.update | STARTED | {"update"=>"tours", "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('59f1678bfd76b827c07db8b8')}, "u"=>{"$set"=>{"name_id"=>"rafting"}}, "multi"=>false, "upsert"=>false}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.update | SUCCEEDED | 0.001969s
+Redirected to http://localhost:3000/tours
+Completed 302 Found in 11ms
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-25 23:46:01 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002351s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000985s
+  Rendered tours/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 106ms (Views: 86.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:46:04 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001s
+  Rendered welcome/index.html.erb within layouts/application (54.7ms)
+Completed 200 OK in 132ms (Views: 111.7ms)
+
+
+Started POST "/tours" for 127.0.0.1 at 2017-10-25 23:47:52 -0500
+Processing by ToursController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"tH4giec29VgiB/9955yd24p286ew4LKfUNQUdLswiJaXdl3peprr4oKkdEROGGB8okV5GGpgUx9q4V2RpHfsBA==", "tour"=>{"name_id"=>"noche_romantica", "title"=>"noche romantica", "description"=>"Noche a luz de la luna llena y cena romantica"}, "commit"=>"Submit"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0028s
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"tours", "documents"=>[{"_id"=>BSON::ObjectId('59f168f8fd76b827c07db8b9'), "name_id"=>"noche_romantica", "title"=>"noche romantica", "description"=>"Noche a luz de la luna llena y cena romantica", "place_id"=>BSON::ObjectId('59f0030bfd76b82...
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.001972s
+Redirected to http://localhost:3000/tours
+Completed 302 Found in 16ms
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-25 23:47:52 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003006s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00073s
+  Rendered tours/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 106ms (Views: 86.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:48:53 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered welcome/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 149ms (Views: 127.6ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:53:42 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003521s
+  Rendered places/index.html.erb within layouts/application (44.3ms)
+Completed 500 Internal Server Error in 121ms
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"tours"}, missing required keys: [:id]):
+    32:   <% end %>
+    33: </table>
+    34: <br>
+    35: <%= link_to 'Tours', tour_path %>
+  
+app/views/places/index.html.erb:35:in `_app_views_places_index_html_erb___376479919_93926976'
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:54:02 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.5ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002418s
+  Rendered places/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 132ms (Views: 111.7ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-25 23:54:04 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003009s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000994s
+  Rendered tours/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 107ms (Views: 87.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:57:08 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001507s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0s
+  Rendered welcome/index.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 125ms (Views: 99.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:57:14 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001004s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002012s
+  Rendered welcome/index.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 133ms (Views: 112.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:57:20 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001972s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000999s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered welcome/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 121ms (Views: 101.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 23:57:22 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001039s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001006s
+  Rendered welcome/index.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 154ms (Views: 130.5ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-25 23:57:25 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000709s
+  Rendered places/index.html.erb within layouts/application (45.8ms)
+Completed 500 Internal Server Error in 124ms
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"tours"}, missing required keys: [:id]):
+    32:   <% end %>
+    33: </table>
+    34: <br>
+    35: <%= link_to 'Tours', tour_path %>
+    36: <br>
+    37: <%= link_to 'Places', place_path %>
+  
+app/views/places/index.html.erb:35:in `_app_views_places_index_html_erb___376479919_105576648'
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:01:39 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002655s
+  Rendered places/index.html.erb within layouts/application (46.1ms)
+Completed 500 Internal Server Error in 123ms
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"places"}, missing required keys: [:id]):
+    34: <br>
+    35: <%= link_to 'Tours', tours_path %>
+    36: <br>
+    37: <%= link_to 'Places', place_path %>
+  
+app/views/places/index.html.erb:37:in `_app_views_places_index_html_erb___376479919_104076228'
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:01:56 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+  Rendered places/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 105ms (Views: 83.3ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:02:37 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000667s
+  Rendered places/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 115ms (Views: 89.3ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-26 00:02:39 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002924s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000947s
+  Rendered rooms/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 119ms (Views: 89.2ms)
+
+
+Started DELETE "/rooms/59f00ba1fd76b822c49a5630" for 127.0.0.1 at 2017-10-26 00:02:48 -0500
+Processing by RoomsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ss1wq7jLlowqNAe8c7nGFZmE7ksg9OI1r02eWKmHjebR2Zhu4ucX17ysQmGQACwiRdsDoWebjtILqkp3SQYrUQ==", "id"=>"59f00ba1fd76b822c49a5630"}
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"_id"=>BSON::ObjectId('59f00ba1fd76b822c49a5630')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.021407s
+MONGODB | localhost:27017 | hotel_development.delete | STARTED | {"delete"=>"rooms", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('59f00ba1fd76b822c49a5630')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | hotel_development.delete | SUCCEEDED | 0.011164s
+Redirected to http://localhost:3000/rooms
+Completed 302 Found in 38ms
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-26 00:02:48 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002544s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001006s
+  Rendered rooms/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 103ms (Views: 84.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 00:03:19 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001242s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+  Rendered welcome/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 119ms (Views: 96.1ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-26 00:06:20 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003004s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001004s
+  Rendered rooms/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 116ms (Views: 95.1ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:06:21 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003007s
+  Rendered places/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 101ms (Views: 80.8ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-26 00:06:35 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003135s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001006s
+  Rendered tours/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 107ms (Views: 86.6ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:06:37 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000501s
+  Rendered places/index.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 125ms (Views: 105.4ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-26 00:06:38 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001862s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00099s
+  Rendered rooms/index.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 106ms (Views: 84.6ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:06:40 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002253s
+  Rendered places/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 113ms (Views: 82.0ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-26 00:09:56 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001009s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000968s
+  Rendered tours/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 107ms (Views: 82.8ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-26 00:12:06 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0040089999999999995s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001009s
+  Rendered tours/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 114ms (Views: 87.3ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-26 00:12:24 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002203s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001007s
+  Rendered tours/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 114ms (Views: 91.4ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-26 00:12:40 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002153s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000771s
+  Rendered tours/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 111ms (Views: 88.4ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-26 00:13:26 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003024s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001015s
+  Rendered tours/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 113ms (Views: 86.7ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:14:30 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002997s
+  Rendered places/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 119ms (Views: 86.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:14:58 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003436s
+  Rendered places/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 111ms (Views: 83.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:16:08 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0021s
+  Rendered places/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 105ms (Views: 85.2ms)
+
+
+Started POST "/places" for 127.0.0.1 at 2017-10-26 00:17:21 -0500
+Processing by PlacesController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"i45A/7VwT72DEOxt/P1WD/FAnwJUzEsykVEGNUYEme299QEf9Z4Pww7BB/T9ZBjzgr3TJ71sFfULhHNzNzoyzA==", "place"=>{"name_id"=>"sygon", "name"=>"hostal sygon", "description"=>"ubicada en mancora", "location_name"=>"mancora,Peru", "video_url"=>"", "max_slider_images"=>"1", "max_thumb_images"=>"5"}, "commit"=>"Guardar"}
+MONGODB | localhost:27017 | hotel_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"_id"=>BSON::ObjectId('59f16fe1fd76b827c07db8ba'), "name_id"=>"sygon", "name"=>"hostal sygon", "description"=>"ubicada en mancora", "location_name"=>"mancora,Peru", "video_url"=>"", "max_thumb_images"=>5, "max_slide...
+MONGODB | localhost:27017 | hotel_development.insert | SUCCEEDED | 0.001004s
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002521s
+  Rendered places/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 92ms (Views: 84.5ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-26 00:19:29 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00333s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+  Rendered rooms/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 103ms (Views: 83.6ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-26 00:20:10 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002121s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000981s
+  Rendered rooms/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 109ms (Views: 85.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:20:24 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002762s
+  Rendered places/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 104ms (Views: 84.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 00:20:28 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002004s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001002s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered welcome/index.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 122ms (Views: 101.1ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-26 00:22:32 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (2.1ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001004s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00066s
+  Rendered tours/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 111ms (Views: 85.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 00:29:25 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003007s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+  Rendered welcome/index.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 367ms (Views: 344.6ms)
+
+
+Started GET "/tours" for 127.0.0.1 at 2017-10-26 00:29:50 -0500
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  Rendered tours/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.00104s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001001s
+  Rendered tours/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 191ms (Views: 171.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:30:02 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (2.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002052s
+  Rendered places/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 212ms (Views: 160.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2017-10-26 00:30:15 -0500
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002214s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001015s
+  Rendered rooms/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 183ms (Views: 162.1ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:30:41 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002587s
+  Rendered places/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 181ms (Views: 155.3ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:32:03 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000785s
+  Rendered places/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 200ms (Views: 177.8ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2017-10-26 00:34:46 -0500
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/_form.html.erb (1.0ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002669s
+  Rendered places/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 191ms (Views: 167.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 00:35:17 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001348s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59f0030bfd76b822c49a562d')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001003s
+  Rendered welcome/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 202ms (Views: 173.3ms)
+
+

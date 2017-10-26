@@ -1,8 +1,12 @@
 <h1>Cuartos!</h1>
 
 <%= render "form" %>
-
+<br>
 <table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
   <%
   rooms = current_place.rooms
   rooms.each do |room| %>
@@ -18,3 +22,5 @@
 
   <% end %>
 </table>
+<br>
+<%= link_to 'Places', places_path %>
