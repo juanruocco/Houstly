@@ -52751,3 +52751,90 @@ MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001658s
 Completed 200 OK in 64ms (Views: 61.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-26 09:37:17 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002032s
+  Rendered modules/_slider.html.erb (3.3ms)
+  Rendered modules/_videofotos.html.erb (21.5ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003529s
+  Rendered modules/_rooms.html.erb (18.2ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0069229999999999995s
+  Rendered modules/_fotosdescription.html.erb (22.5ms)
+  Rendered welcome/index.html.erb within layouts/application (320.1ms)
+Completed 200 OK in 462ms (Views: 456.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 10:04:55 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.004112s
+  Rendered modules/_slider.html.erb (1.8ms)
+  Rendered modules/_videofotos.html.erb (16.5ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003141s
+  Rendered modules/_rooms.html.erb (16.8ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.002707s
+  Rendered modules/_fotosdescription.html.erb (24.0ms)
+  Rendered welcome/index.html.erb within layouts/application (109.5ms)
+Completed 200 OK in 228ms (Views: 217.5ms)
+
+
+Started GET "/psygon" for 127.0.0.1 at 2017-10-26 10:15:13 -0500
+Processing by PsygonController#index as HTML
+  Rendering psygon/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"psygon"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003426s
+  Rendered modules/_header.html.erb (10.1ms)
+  Rendered modules/_slider.html.erb (0.7ms)
+  Rendered modules/_videofotos.html.erb (14.7ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59ee5c07d592ce3e6081882a')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.008015s
+  Rendered modules/_rooms.html.erb (19.3ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59ee5c07d592ce3e6081882a')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0009159999999999999s
+  Rendered modules/_fotosdescription.html.erb (12.1ms)
+  Rendered psygon/index.html.erb within layouts/application (112.9ms)
+Completed 200 OK in 217ms (Views: 204.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 12:20:00 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"finca"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.003312s
+  Rendered modules/_slider.html.erb (1.2ms)
+  Rendered modules/_videofotos.html.erb (57.9ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001294s
+  Rendered modules/_rooms.html.erb (31.3ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59e9264ad592ce68d38261b6')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001779s
+  Rendered modules/_fotosdescription.html.erb (39.0ms)
+  Rendered welcome/index.html.erb within layouts/application (302.5ms)
+Completed 200 OK in 606ms (Views: 591.0ms)
+
+
+Started GET "/psygon" for 127.0.0.1 at 2017-10-26 12:20:07 -0500
+Processing by PsygonController#index as HTML
+  Rendering psygon/index.html.erb within layouts/application
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"places", "filter"=>{"name_id"=>"psygon"}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.001022s
+  Rendered modules/_header.html.erb (2.9ms)
+  Rendered modules/_slider.html.erb (0.5ms)
+  Rendered modules/_videofotos.html.erb (12.7ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"rooms", "filter"=>{"place_id"=>BSON::ObjectId('59ee5c07d592ce3e6081882a')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.0006709999999999999s
+  Rendered modules/_rooms.html.erb (11.6ms)
+MONGODB | localhost:27017 | hotel_development.find | STARTED | {"find"=>"tours", "filter"=>{"place_id"=>BSON::ObjectId('59ee5c07d592ce3e6081882a')}}
+MONGODB | localhost:27017 | hotel_development.find | SUCCEEDED | 0.000901s
+  Rendered modules/_fotosdescription.html.erb (8.7ms)
+  Rendered psygon/index.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 135ms (Views: 131.6ms)
+
+
