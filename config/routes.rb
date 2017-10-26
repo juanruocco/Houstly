@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+
+
+
+
+
   resources :rooms, :tours, :places
 
   get '/:id', to: 'welcome#index'
 
   root 'welcome#index'
-
 
   post '/tours' => 'tours#create'
   get  '/tours' => 'tours#new'
