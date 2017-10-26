@@ -1,11 +1,21 @@
+<tr>
+  <td>Name ID</td>
+  <td>Name</td>
+  <td>Description</td>
+  <td>Location</td>
+  <td>Video url</td>
+  <td>Number Sliders Images</td>
+  <td>Number Thumb Images</td>
+</tr>
+
 <%= form_for @place do |f| %>
 
-  Name ID: <%= f.text_field :name_id %>
-  Name: <%= f.text_field :name %>
-  Description: <%= f.text_field :description %>
-  Location: <%= f.text_field :location_name %>
-  Video url: <%= f.text_field :video_url %>
-  Number Sliders Images: <%= f.text_field :max_slider_images %>
-  Number Thumb Images: <%= f.text_field :max_thumb_images %>
-  <%= f.submit "Submit" %>
+  <td><%= f.text_field :name_id %></td>
+  <td><%= f.text_field :name %></td>
+  <td><%= f.text_field :description, :size => 70 %></td>
+  <td><%= f.text_field :location_name %></td>
+  <td><%= f.text_field :video_url %></td>
+  <td><%= f.text_field :max_slider_images, :size => 10 %></td>
+  <td><%= f.text_field :max_thumb_images, :size => 10 %></td>
+  <td><%= f.submit "Submit" %></td>
 <% end %>

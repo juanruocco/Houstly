@@ -1,23 +1,35 @@
 <h1>Tours!</h1>
-
-<%= render "form" %>
-
-
 <table>
-    <%
+  <tr>
+    <td width="15%">Name id</td>
+    <td width="15%">Title</td>
+    <td width="50%">Description</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <%= form_for @tour do |f| %>
+
+      <td ><%= f.text_field :name_id %></td>
+      <td><%= f.text_field :title %></td>
+      <td><%= f.text_field :description, :size => 100 %></td>
+
+      <td><%= f.submit "Submit" %></td>
+    <% end %>
+  </tr>
+
+
+  <%
     tours = current_place.tours
     tours.each do |tour| %>
-    <tr>
-      <td>
-        <%= tour.name_id %>
-        <%= tour.title %>
-        <%= tour.description %>
-      </td>
-
-      <td><%= link_to "Edit", edit_tour_path(tour), class: "btn btn-default" %></td>
-      <td>
-        <%= button_to "Delete", tour, method: :delete, data: { confirm: "Are you sure you wish to delete #{tour.name_id} #{tour.title}?" }, class: "btn btn-danger" %>
-      </td>
-    </tr>
+        <%= form_for tour do |f| %>
+        <tr>
+          <td><%= f.text_field :name_id %></td>
+          <td><%= f.text_field :title %></td>
+          <td><%= f.text_field :description, :size => 100 %></td>
+          <td><%= f.submit 'Update', class: 'btn btn-primary' %></td>
+          <td><%= f.submit 'Delete', class: 'btn btn-primary' %></td>
+        </tr>
+        <% end %>
     <% end %>
 </table>

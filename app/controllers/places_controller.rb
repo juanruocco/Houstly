@@ -24,8 +24,7 @@ class PlacesController < ApplicationController
       flash[:success] = "place updated!"
 
     end
-
-    redirect_to places_path
+    #redirect_to places_path
   end
 
   def destroy

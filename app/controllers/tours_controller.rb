@@ -13,29 +13,24 @@ class ToursController < ApplicationController
     redirect_to tours_path
   end
 
-  def edit
-    @tour = Tour.find(params[:id])
-  end
-
   def update
     @tour = Tour.find(params[:id])
-
-    if @tour.update_attributes(tour_params)
-      flash[:success] = "tour updated!"
-      #redirect_to tours_path
-      #redirect_to people_path, notice: "#{first_name} #{last_name} has been updated!" and return
-    end
-
-    redirect_to tours_path
-  end
-
-  def destroy
+    if params[:commit] == 'Update'
+      if @tour.update_attributes(tour_params)
+        flash[:success] = "tour updated!"
+        #redirect_to tours_path
+        #redirect_to people_path, notice: "#{first_name} #{last_name} has been updated!" and return
+      end
+    elsif  params[:commit] == 'Delete'
       @tour = Tour.find(params[:id])
       @tour.destroy
       flash[:success] = "tour was deleted!"
       #redirect_to people_path, notice: "#{first_name} #{last_name} has been deleted!" and return
-      redirect_to tours_path
+      #redirect_to tours_path
     end
+    redirect_to tours_path
+  end
+
 
   private
   def tour_params
