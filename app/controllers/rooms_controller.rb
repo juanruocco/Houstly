@@ -1,10 +1,13 @@
 class RoomsController < ApplicationController
   def index
     @room = Room.new
+    
+
   end
 
   def create
     @room = Room.new(room_params)
+
     current_place.rooms << @room
     redirect_to '/rooms'
     return

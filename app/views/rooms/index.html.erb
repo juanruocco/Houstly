@@ -9,8 +9,8 @@
   <% end %>
 
   <%
-  rooms = current_place.rooms
-  rooms.each do |room| %>
+  @rooms = current_place.rooms
+  @rooms.each do |room| %>
       <%= form_for room do |f| %>
       <tr>
         <td>Name: <%= f.text_field :name %></td>
