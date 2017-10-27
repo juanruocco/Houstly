@@ -1,0 +1,36 @@
+<%= form_with model: @user , local: true do |f| %>
+<table>
+  <tr>
+    <td  width="30%">Email:</td>
+    <td  >
+      <%= f.text_field :email %>
+    </td>
+  </tr>
+  <tr>
+    <td  width="30%">First Name:</td>
+    <td> <%= f.text_field :first_name %></td>
+  </tr>
+  <tr>
+    <td  width="30%">Last Name:</td>
+    <td> <%= f.text_field :last_name %></td>
+  </tr>
+  <tr>
+    <td  width="30%">Password:</td>
+    <td> <%= f.password_field :password %></td>
+  </tr>
+  <tr>
+    <td  width="30%">Birthdate:</td>
+    <td> <%= f.text_field :birthdate %></td>
+  </tr>
+  <tr>
+    <td  width="30%">Sex:</td>
+    <td> <%= f.text_field :sex %></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <br>
+      <%= f.submit 'Sign up for Houstly', class: 'btn btn-primary' %>
+    </td>
+  </tr>
+</table>
+<% end %>

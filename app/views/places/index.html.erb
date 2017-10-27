@@ -2,11 +2,10 @@
 <table>
   <%= render "form" %>
 
-<<<<<<< HEAD
-
   <%
   places = Place.all
-  places.each do |place| %>
+  places.each do |place|
+ %>
   <tr>
     <td><%= link_to place.name_id, edit_place_path(place), class: "btn btn-default" %></td>
     <td><%= place.name %></td>
@@ -18,41 +17,10 @@
     <td>
       <%= button_to "Delete", place, method: :delete, data: { confirm: "Are you sure you wish to delete #{place.name} #{place.description}?" }, class: "btn btn-danger" %>
     </td>
-
-=======
-<%= render "form" %>
-<br>
-<table>
-  <tr>
-    <th>Name ID</th>
-    <th>Name</th>
-    <th>Location</th>
-    <th>Description</th>
-    <th>Video URL </th>
-    <th>No. Sliders Images</th>
-    <th>No. Thumb Images</th>
->>>>>>> origin/tomas
   </tr>
-  <%
-  places = Place.all
-  places.each do |place|
-  %>
-    <tr>
-      <td><%= place.name_id %></td>
-      <td><%= place.name %></td>
-      <td><%= place.location_name %></td>
-      <td><%= place.description %></td>
-      <td><%= place.video_url %></td>
-      <td><%= place.max_slider_images %></td>
-      <td><%= place.max_thumb_images %></td>
-      <td><%= link_to "Edit", edit_place_path(place), class: "btn btn-default" %></td>
-      <td>
-        <%= button_to "Delete", place, method: :delete, data: { confirm: "Are you sure you wish to delete #{place.name} #{place.description}?" }, class: "btn btn-danger" %>
-      </td>
-    </tr>
   <% end %>
 </table>
-<br>
+<br/>
 <%= link_to 'Tours', tours_path %>
-<br>
+<br/>
 <%= link_to 'Rooms', rooms_path %>

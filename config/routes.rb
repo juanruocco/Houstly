@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'psygon/index'
 
-  resources :rooms, :tours, :places
+  resources :rooms, :tours, :places, :users
 
   root 'welcome#index'
 
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post '/place' => 'places#create'
   get  '/place' => 'places#new'
 
+  get  '/users' => 'users#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
