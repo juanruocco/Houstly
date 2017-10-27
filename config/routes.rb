@@ -4,6 +4,18 @@ Rails.application.routes.draw do
 
 
 
+  get 'commonarea/index'
+
+  get 'commonarea/create'
+
+  get 'commonarea/update'
+
+  get 'activities/index'
+
+  get 'activities/create'
+
+  get 'activities/update'
+
   resources :rooms, :tours, :places
 
   get '/:id', to: 'welcome#index'
