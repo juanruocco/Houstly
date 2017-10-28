@@ -1,4 +1,4 @@
-<h1>Actividades!</h1>
+<h1>Common areas!</h1>
 <table>
   <tr>
     <td>Name</td>
@@ -9,7 +9,7 @@
     <td></td>
   </tr>
 
-  <%= form_for @activity do |f| %>
+  <%= form_for @common_area do |f| %>
     <tr>
       <td><%= f.text_field :title %></td>
       <td><%= f.text_field :description %></td>
@@ -19,9 +19,9 @@
   <% end %>
 
   <%
-  @activities = current_place.activities
-  @activities.each do |activity| %>
-      <%= form_for activity do |f| %>
+  @activities = current_place.common_areas
+  @activities.each do |common_area| %>
+      <%= form_for common_area do |f| %>
       <tr>
         <td><%= f.text_field :title %></td>
         <td><%= f.text_field :description %></td>
@@ -30,7 +30,7 @@
         <td><%= f.submit 'Update', class: 'btn btn-primary' %>
         <td>
             <%= f.submit 'Delete', class: 'btn btn-primary' %>
-            <!-- #button_to "Delete", activity, method: :delete, data: { confirm: "Are you sure you wish to delete #{activity.name} #{activity.description}?" }, class: "btn btn-danger"
+            <!-- #button_to "Delete", common_area, method: :delete, data: { confirm: "Are you sure you wish to delete #{common_areas.name} #{common_areas.description}?" }, class: "btn btn-danger"
          -->
          </td>
       </tr>

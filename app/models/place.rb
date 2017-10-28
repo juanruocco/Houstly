@@ -10,5 +10,7 @@ class Place
 
   has_many :rooms
   has_many :tours
+  has_many :activities
+  has_many :common_areas
 
 end

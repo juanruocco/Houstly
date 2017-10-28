@@ -20,6 +20,10 @@
   @thumb_images = @place.max_thumb_images
   @rooms = @place.rooms.all
   @tours = @place.tours.all
+  @activities = @place.activities.all
+  puts "activities:"
+  puts @activities
+  @common_areas = @place.common_areas.all
  %>
 
 
@@ -28,6 +32,8 @@
   <%= render 'modules/slider' %>
   <%= render 'modules/videofotos' %>
   <%= render 'modules/rooms' %>
+  <%= render 'modules/activities' %>
+  <%#= #render 'modules/common_ares' %>
 
   <style scoped="">
   section#themo_rooms_1{padding-top:75px; padding-bottom:75px}

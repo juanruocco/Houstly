@@ -1,22 +1,5 @@
 Rails.application.routes.draw do
-
-
-
-
-
-  get 'commonarea/index'
-
-  get 'commonarea/create'
-
-  get 'commonarea/update'
-
-  get 'activities/index'
-
-  get 'activities/create'
-
-  get 'activities/update'
-
-  resources :rooms, :tours, :places
+  resources :rooms, :tours, :places, :activities, :common_areas
 
   get '/:id', to: 'welcome#index'
 
@@ -27,6 +10,12 @@ Rails.application.routes.draw do
 
   post '/rooms' => 'rooms#create'
   get  '/rooms' => 'rooms#new'
+
+  post '/activities' => 'activities#create'
+  get  '/activities' => 'activities#new'
+
+  post '/common_areas' => 'common_areas#create'
+  get  '/common_areas' => 'common_areas#new'
 
   post '/place' => 'places#create'
   get  '/place' => 'places#new'
