@@ -8,6 +8,7 @@
     <th>Sex</th>
     <th>Type License</th>
     <th>Expiration Date</th>
+    <th>Psw</th>
   </tr>
   <% @users.each do |userit| %>
       <%= form_for userit do |f| %>
@@ -19,13 +20,33 @@
         <td><%= f.text_field :sex %></td>
         <td><%= f.text_field :type_license %></td>
         <td><%= f.text_field :expiration_date %></td>
+        <td><%= f.text_field :password_digest %></td>
         <td>
           <%= f.submit 'Update', class: 'btn btn-primary' %>
         </td>
         <td>
             <%= f.submit 'Delete', class: 'btn btn-primary' %>
-         </td>
+       </td>
+      <td>
+        <% if userit.errors.any? %>
+           <h2>
+             <%= pluralize( userit.errors.count, "error") %> prohibido este articulo de
+             ser guardado:
+             <ul>
+               <% userit.errors.full_messages.each do |msj| %>
+                <li><%= msj %></li>
+               <%
+               end
+               %>
+             </ul>
+           </h2>
+        <%
+        end
+        %>
+      </td>
       </tr>
       <% end %>
+
+
   <% end %>
 </table>

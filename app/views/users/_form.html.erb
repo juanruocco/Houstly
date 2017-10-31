@@ -1,36 +1,26 @@
-<%= form_with model: @user , local: true do |f| %>
-<table>
-  <tr>
-    <td  width="30%">Email:</td>
-    <td  >
-      <%= f.text_field :email %>
-    </td>
-  </tr>
-  <tr>
-    <td  width="30%">First Name:</td>
-    <td> <%= f.text_field :first_name %></td>
-  </tr>
-  <tr>
-    <td  width="30%">Last Name:</td>
-    <td> <%= f.text_field :last_name %></td>
-  </tr>
-  <tr>
-    <td  width="30%">Password:</td>
-    <td> <%= f.password_field :password %></td>
-  </tr>
-  <tr>
-    <td  width="30%">Birthdate:</td>
-    <td> <%= f.text_field :birthdate %></td>
-  </tr>
-  <tr>
-    <td  width="30%">Sex:</td>
-    <td> <%= f.text_field :sex %></td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <br>
-      <%= f.submit 'Sign up for Houstly', class: 'btn btn-primary' %>
-    </td>
-  </tr>
-</table>
+<%= form_for(@user) do |f| %>
+
+  <%= render 'shared/error_messages' %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, class: 'form-control' %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, class: 'form-control' %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+  <%= f.label :birthdate %>
+  <%= f.text_field :birthdate, class: 'form-control' %>
+
+  <%= f.label :sex %>
+  <%= f.text_field :sex, class: 'form-control' %>
+  <br/>
+  <%= f.submit 'Sign up for Houstly', class: 'btn btn-primary' %>
 <% end %>

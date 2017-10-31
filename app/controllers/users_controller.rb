@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 		@user = User.new(users_params)
 
 		if @user.save
+      session[:user_id] = @user.id
 			redirect_to  @user
 		else
 			render 'new'
@@ -26,21 +27,17 @@ class UsersController < ApplicationController
     if params[:commit] == 'Update'
       if @user.update_attributes(users_params)
         flash[:success] = "user updated!"
-        #redirect_to tours_path
-        #redirect_to people_path, notice: "#{first_name} #{last_name} has been updated!" and return
       end
     elsif  params[:commit] == 'Delete'
       @user = User.find(params[:id])
       @user.destroy
       flash[:success] = "user was deleted!"
-      #redirect_to people_path, notice: "#{first_name} #{last_name} has been deleted!" and return
-      #redirect_to tours_path
     end
     redirect_to users_path
   end
 
   private
   def users_params
-    params.require(:user).permit(:email, :first_name, :last_name, :password, :birthdate, :sex, :type_license, :expiration_date)
+    params.require(:user).permit(:first_name,:last_name,:email,:password, :password_confirmation,:birthdate,:sex,:type_license,:expiration_date)
   end
 end
