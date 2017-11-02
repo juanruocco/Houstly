@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController
+
   def index
     @place = Place.new
   end
@@ -15,13 +16,15 @@ class PlacesController < ApplicationController
 
   def edit
     @place = Place.find(params[:id])
-    current_place = @place
+    puts "place controller"
+    puts @place.name
+    #current_place = @place
 
   end
 
   def update
     @place = Place.find(params[:id])
-    current_place = @place 
+    current_place = @place
     if @place.update_attributes(place_params)
       flash[:success] = "place updated!"
 

@@ -1,31 +1,31 @@
 <h1>Actividades!</h1>
 <table>
   <tr>
-    <td>Name</td>
-    <td>Description</td>
-    <td>image</td>
+    <td width="15%">Name</td>
+    <td width="15%"> Description</td>
+    <td width="50%">image</td>
 
-    <td></td>
-    <td></td>
+    <td width="10%"></td>
+    <td width="10%"></td>
   </tr>
 
-  <%= form_for @activity do |f| %>
+  <%= form_for (@activity), url: {action: "create"} do |f| %>
     <tr>
       <td><%= f.text_field :title %></td>
       <td><%= f.text_field :description %></td>
-      <td><%= f.text_field :image_path %></td>
+      <td><%= f.text_field :image_path, :size => 100 %></td>
       <td><%= f.submit 'Add', class: 'btn btn-primary' %></td>
     </tr>
   <% end %>
 
   <%
-  @activities = current_place.activities
+  @activities = @place.activities
   @activities.each do |activity| %>
-      <%= form_for activity do |f| %>
+      <%= form_for [@place,activity] do |f|  %>
       <tr>
         <td><%= f.text_field :title %></td>
         <td><%= f.text_field :description %></td>
-        <td><%= f.text_field :image_path %></td>
+        <td><%= f.text_field :image_path, :size => 100 %></td>
 
         <td><%= f.submit 'Update', class: 'btn btn-primary' %>
         <td>
@@ -38,4 +38,5 @@
   <% end %>
 </table>
 <br>
-<%= link_to 'Places', places_path %>
+<br>
+<%= link_to 'Back', edit_place_path(@place) %>

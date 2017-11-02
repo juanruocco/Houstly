@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   def current_place
     @current_place = Place.find_by(:name_id => "finca")
+
   end
 
   helper_method :current_place

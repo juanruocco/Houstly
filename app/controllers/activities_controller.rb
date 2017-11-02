@@ -1,17 +1,20 @@
 class ActivitiesController < ApplicationController
   def index
+    @place = Place.find(params[:place_id])
     @activity = Activity.new
+
   end
 
   def create
+    @place = Place.find(params[:place_id])
     @activity = Activity.new(activity_params)
-
-    current_place.activities << @activity
-    redirect_to '/activities'
+    @place.activities << @activity
+    render 'index'
     return
   end
 
   def update
+    @place = Place.find(params[:place_id])
     @activity = Activity.find(params[:id])
 
     if params[:commit] == 'Update'
@@ -26,7 +29,7 @@ class ActivitiesController < ApplicationController
       #redirect_to people_path, notice: "#{first_name} #{last_name} has been deleted!" and return
 
     end
-    redirect_to activities_path
+    render 'index'
   end
 
   private

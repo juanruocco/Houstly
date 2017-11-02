@@ -39,22 +39,23 @@
     </td>
   </tr>
   <tr>
-    <td><%= link_to "Rooms", rooms_path(@place) %></td>
+    <td><%= link_to "Rooms", place_rooms_path(@place) %></td>
   </tr>
   <tr>
-    <td><%= link_to "Tours", tours_path(@place) %></td>
+    <td><%= link_to "Tours", place_tours_path(@place) %></td>
   </tr>
   <tr>
-    <td><%= link_to "activities", activities_path(@place) %></td>
+    <td><%= link_to "activities", place_activities_path(@place) %></td>
   </tr>
   <tr>
-    <td><%= link_to "common areas", common_areas_path(@place) %></td>
+    <td><%= link_to "common areas", place_common_areas_path(@place) %></td>
   </tr>
-
   <tr>
     <td><%= f.submit "Submit" %></td>
   </tr>
-
+  <tr>
+    <td><%= link_to 'Back', places_path %></td>
+  </tr>
 
   <% end %>
 </table>

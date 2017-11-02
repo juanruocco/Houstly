@@ -8,7 +8,7 @@
     <td></td>
   </tr>
   <tr>
-    <%= form_for @tour do |f| %>
+    <%= form_for (@tour), url: {action: "create"} do |f| %>
 
       <td ><%= f.text_field :name_id %></td>
       <td><%= f.text_field :title %></td>
@@ -20,9 +20,8 @@
 
 
   <%
-    tours = current_place.tours
-    tours.each do |tour| %>
-        <%= form_for tour do |f| %>
+    @place.tours.each do |tour| %>
+        <%= form_for [@place,tour] do |f| %>
         <tr>
           <td><%= f.text_field :name_id %></td>
           <td><%= f.text_field :title %></td>
@@ -34,4 +33,4 @@
     <% end %>
 </table>
 <br>
-<%= link_to 'Places', places_path %>
+<%= link_to 'Back', edit_place_path(@place) %>

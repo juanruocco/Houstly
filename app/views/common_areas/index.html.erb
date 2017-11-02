@@ -9,7 +9,7 @@
     <td></td>
   </tr>
 
-  <%= form_for @common_area do |f| %>
+  <%= form_for (@common_area), url: {action: "create"} do |f| %>
     <tr>
       <td><%= f.text_field :title %></td>
       <td><%= f.text_field :description %></td>
@@ -19,9 +19,9 @@
   <% end %>
 
   <%
-  @activities = current_place.common_areas
-  @activities.each do |common_area| %>
-      <%= form_for common_area do |f| %>
+  @common_areas = @place.common_areas
+  @common_areas.each do |common_area| %>
+      <%= form_for ([@place,common_area]) do |f| %>
       <tr>
         <td><%= f.text_field :title %></td>
         <td><%= f.text_field :description %></td>
@@ -38,4 +38,4 @@
   <% end %>
 </table>
 <br>
-<%= link_to 'Places', places_path %>
+<%= link_to 'Back', edit_place_path(@place) %>

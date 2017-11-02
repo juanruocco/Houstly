@@ -1,17 +1,20 @@
 class CommonAreasController < ApplicationController
   def index
+    @place = Place.find(params[:place_id])
     @common_area = CommonArea.new
   end
 
   def create
+    @place = Place.find(params[:place_id])
     @common_area = CommonArea.new(common_area_params)
 
-    current_place.common_areas << @common_area
-    redirect_to '/common_areas'
+    @place.common_areas << @common_area
+    render 'index'
     return
   end
 
   def update
+    @place = Place.find(params[:place_id])
     @common_area = CommonArea.find(params[:id])
 
     if params[:commit] == 'Update'

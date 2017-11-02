@@ -1,17 +1,23 @@
+
 class RoomsController < ApplicationController
   def index
+    @place = Place.find(params[:place_id])
     @room = Room.new
+    #@room = @place.rooms.build
   end
 
   def create
+    @place = Place.find(params[:place_id])
     @room = Room.new(room_params)
 
-    current_place.rooms << @room
-    redirect_to '/rooms'
+    @place.rooms << @room
+    render 'index'
     return
   end
 
   def update
+    @place = Place.find(params[:place_id])
+
     @room = Room.find(params[:id])
 
     if params[:commit] == 'Update'
@@ -26,7 +32,7 @@ class RoomsController < ApplicationController
       #redirect_to people_path, notice: "#{first_name} #{last_name} has been deleted!" and return
 
     end
-    redirect_to rooms_path
+    redirect_to place_rooms_path
   end
 
   private

@@ -1,19 +1,18 @@
 class ToursController < ApplicationController
   def index
-    @tour = Tour.new
-  end
-
-  def new
+    @place = Place.find(params[:place_id])
     @tour = Tour.new
   end
 
   def create
+    @place = Place.find(params[:place_id])
     @tour = Tour.new(tour_params)
-    current_place.tours << @tour
-    redirect_to tours_path
+    @place.tours << @tour
+    render 'index'
   end
 
   def update
+    @place = Place.find(params[:place_id])
     @tour = Tour.find(params[:id])
     if params[:commit] == 'Update'
       if @tour.update_attributes(tour_params)
