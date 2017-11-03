@@ -15,7 +15,7 @@
             tour_name_id = tour.name_id
             tour_title = tour.title
             tour_description = tour.description
-            tour_image = asset_path("#{@name_id}_tour_thumb_#{tour_name_id}.jpg")
+            tour_image = asset_path(tour.image_path)
           %>
 
           <div class="col-md-6">

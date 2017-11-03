@@ -27,12 +27,12 @@ class ToursController < ApplicationController
       #redirect_to people_path, notice: "#{first_name} #{last_name} has been deleted!" and return
       #redirect_to tours_path
     end
-    redirect_to tours_path
+    redirect_to place_tours_path
   end
 
 
   private
   def tour_params
-    params.require(:tour).permit(:name_id, :title, :description)
+    params.require(:tour).permit(:name_id, :title, :description, :image_path)
   end
 end

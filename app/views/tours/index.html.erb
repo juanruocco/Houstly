@@ -3,7 +3,9 @@
   <tr>
     <td width="15%">Name id</td>
     <td width="15%">Title</td>
-    <td width="50%">Description</td>
+    <td width="15%">Description</td>
+    <td width="40%">image</td>
+
     <td></td>
     <td></td>
   </tr>
@@ -13,7 +15,7 @@
       <td ><%= f.text_field :name_id %></td>
       <td><%= f.text_field :title %></td>
       <td><%= f.text_field :description, :size => 100 %></td>
-
+      <td><%= f.text_field :image_path, :size => 100 %></td>
       <td><%= f.submit "Submit" %></td>
     <% end %>
   </tr>
@@ -26,6 +28,7 @@
           <td><%= f.text_field :name_id %></td>
           <td><%= f.text_field :title %></td>
           <td><%= f.text_field :description, :size => 100 %></td>
+          <td><%= f.text_field :image_path, :size => 100 %></td>
           <td><%= f.submit 'Update', class: 'btn btn-primary' %></td>
           <td><%= f.submit 'Delete', class: 'btn btn-primary' %></td>
         </tr>

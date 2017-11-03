@@ -9,7 +9,7 @@ class ActivitiesController < ApplicationController
     @place = Place.find(params[:place_id])
     @activity = Activity.new(activity_params)
     @place.activities << @activity
-    render 'index'
+    redirect_to place_activities_path
     return
   end
 
@@ -29,7 +29,7 @@ class ActivitiesController < ApplicationController
       #redirect_to people_path, notice: "#{first_name} #{last_name} has been deleted!" and return
 
     end
-    render 'index'
+    redirect_to place_activities_path
   end
 
   private

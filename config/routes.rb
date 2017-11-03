@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 #, :tours, :activities, :common_areas
   #resources :rooms, :tours, :activities, :common_areas
 
-  #get '/:id', to: 'welcome#index'
+  get '/:id', to: 'welcome#index'
 
   root 'welcome#index'
 
