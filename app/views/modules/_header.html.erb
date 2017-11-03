@@ -8,15 +8,15 @@
         <div class="top-nav-icon-blocks">
           <div class="icon-block">
             <p>
-              <a href="mailto:mail@maill.com">
+              <a href='mailto:<%=@email%>'>
                 <i class="glyphicons glyphicons-envelope"></i>
-                <span>mail@mail.com</span>
+                <span>email</span>
               </a>
             </p>
           </div>
           <div class="icon-block">
             <p>
-              <a href="#">
+              <a href='<%=@location_url%>'>
                 <i class="glyphicons glyphicons-google-maps"></i>
                 <span>Estamos en</span>
               </a>
@@ -24,9 +24,9 @@
           </div>
           <div class="icon-block">
             <p>
-              <a href="tel:+1%20111%201111%20111">
+              <a href='tel:<%=@cellphone%>'>
                 <i class="glyphicons glyphicons-iphone"></i>
-                <span>+1 11111111</span>
+                <span><%=@cellphone%></span>
               </a>
             </p>
           </div>
@@ -54,14 +54,15 @@
       <div id="logo">
           <a href="./">
 
-          <img class="logo-trans logo-reg" src="<%=asset_path('psygon_logo.png')%>" height="48" width="100" alt="Hotel Finca El Cielo">
-          <img class="logo-main logo-reg" src="<%=asset_path('psygon_logo.png')%>" height="48" width="50" alt="Hotel Finca El Cielo">
+          <img class="logo-trans logo-reg" src="<%=asset_path(@logo_path)%>" height="48" width="100" alt="Hotel Finca El Cielo">
+          <img class="logo-main logo-reg" src="<%=asset_path(@logo_path)%>" height="48" width="50" alt="Hotel Finca El Cielo">
           </a>
       </div>
    </div>
    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul id="menu-primary-navigation" class="nav navbar-nav">
          <li class="menu-cuartos"><a href="#rooms">Cuartos</a></li>
+         <li class="menu-cuartos"><a href="#activities">Actividades</a></li>
          <li class="menu-paquetes"><a href="#tours">Excursiones</a></li>
          <li class="menu-reservar"><a href="#">Reservar</a></li>
      </ul>

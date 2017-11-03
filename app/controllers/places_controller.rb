@@ -18,6 +18,7 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
     puts "place controller"
     puts @place.name
+
     #current_place = @place
 
   end
@@ -27,9 +28,8 @@ class PlacesController < ApplicationController
     current_place = @place
     if @place.update_attributes(place_params)
       flash[:success] = "place updated!"
-
     end
-    #redirect_to places_path
+    redirect_to edit_place_path(@place)
   end
 
   def destroy
@@ -42,7 +42,7 @@ class PlacesController < ApplicationController
 
   private
   def place_params
-    params.require(:place).permit(:name_id, :name, :description, :location_name, :picture, :video_url, :max_thumb_images, :max_slider_images)
+    params.require(:place).permit(:name_id, :name, :description, :facebook_url, :email, :cellphone, :logo_path, :location_url, :location_name, :picture, :video_url, :max_thumb_images, :max_slider_images)
   end
 
 end

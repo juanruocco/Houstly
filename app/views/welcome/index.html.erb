@@ -14,7 +14,13 @@
   @name = @place.name
   @location = @place.location_name
   @image_url = asset_path("#{@name_id}_slider1.jpg")
-
+  @facebook_url = @place.facebook_url
+  @email = @place.email
+  puts "email"
+  puts @email
+  @cellphone = @place.cellphone
+  @logo_path = @place.logo_path
+  @location_url = @place.location_url
   @description = @place.description
   @video = @place.video_url
   @thumb_images = @place.max_thumb_images

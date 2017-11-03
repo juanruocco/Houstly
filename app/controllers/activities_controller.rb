@@ -2,7 +2,6 @@ class ActivitiesController < ApplicationController
   def index
     @place = Place.find(params[:place_id])
     @activity = Activity.new
-
   end
 
   def create
