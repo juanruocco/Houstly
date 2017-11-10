@@ -1,0 +1,2 @@
+module WebComponentHelper
+end

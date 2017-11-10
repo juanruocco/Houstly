@@ -16,22 +16,13 @@
   @image_url = asset_path("#{@name_id}_slider1.jpg")
   @facebook_url = @place.facebook_url
   @email = @place.email
-  puts "email"
-  puts @email
   @cellphone = @place.cellphone
   @logo_path = @place.logo_path
   @location_url = @place.location_url
   @description = @place.description
   @video = @place.video_url
   @thumb_images = @place.max_thumb_images
-  @rooms = @place.rooms.all
-  @tours = @place.tours.all
-  @activities = @place.activities.all
-  puts "activities:"
-  puts @activities
-  puts "logo:"
-  puts @logo_path
-  @common_areas = @place.common_areas.all
+
  %>
 
 
@@ -39,19 +30,10 @@
   <%= render 'modules/header' %>
   <%= render 'modules/slider' %>
   <%= render 'modules/videofotos' %>
-  <%= render 'modules/rooms' %>
-  <%= render 'modules/activities' %>
-  <%#= render 'modules/common_ares' %>
-
   <style scoped="">
   section#themo_rooms_1{padding-top:75px; padding-bottom:75px}
   </style>
-
-  <%= render 'modules/fotosdescription' %>
-
-
-
-
+  <%= render 'modules/webcomponents' %>
 
 </div>
 

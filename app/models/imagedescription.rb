@@ -1,10 +1,9 @@
-class CommonArea
+class Imagedescription
   include Mongoid::Document
 
-  field :title, type: String
+  field :name, type: String
   field :description, type: String
   field :image_path, type: String
 
-  belongs_to :place
-  
+  belongs_to :webcomponent
 end

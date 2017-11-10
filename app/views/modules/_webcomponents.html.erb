@@ -1,0 +1,27 @@
+<%
+@webcomponents = @place.webcomponents
+
+@webcomponents.each do |webcomponent|
+
+  if webcomponent.style == 'cuadricula1'
+      @webcomponent = webcomponent
+      puts 'webcomponent name'
+      puts @webcomponent.name %>
+
+      <%=render 'modules/wcstylecuadrado1'%>
+
+   <%end%>
+
+
+   <%
+   if webcomponent.style == 'cuadricula2'
+       @webcomponent = webcomponent
+       %>
+
+       <%=render 'modules/wcstylecuadrado2'%>
+
+    <%end%>
+
+<%
+end
+%>

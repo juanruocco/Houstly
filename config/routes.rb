@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+
   resources :places do
-    resources :rooms, :tours, :activities, :common_areas
+    resources :webcomponents do
+      resources :imagedescriptions
+    end
   end
 #, :tours, :activities, :common_areas
   #resources :rooms, :tours, :activities, :common_areas

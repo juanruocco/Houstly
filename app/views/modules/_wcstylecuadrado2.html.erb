@@ -1,20 +1,21 @@
 
-<div id="activities">
+<div id="webcomponent">
   <section id="themo_featured_1" class=" features ">
     <div class="container">
       <div class="features-inner">
         <div class="row">
           <div class="section-header col-xs-12 centered">
-            <h2>Actividades</h2>
-            <p>Escoje uno de nuestras actividades</p>
+            <h2><%= @webcomponent.name %></h2>
+            <p><%= @webcomponent.description %></p>
           </div><!-- /.section-header -->
         </div><!-- /.row -->
         <div class="row">
           <%
-          @activities.each do |activity|
-            tour_title = activity.title
-            tour_description = activity.description
-            tour_image = asset_path(activity.image_path)
+          @imagedescriptions = @webcomponent.imagedescriptions
+          @imagedescriptions.each do |imagedescription|
+            tour_title = imagedescription.name
+            tour_description = imagedescription.description
+            tour_image = asset_path(imagedescription.image_path)
           %>
 
           <div class="col-md-6">
