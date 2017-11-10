@@ -6,6 +6,17 @@
           <p>Bienvenidos a <%=@name%></p>
         </div>
         <div class="top-nav-icon-blocks">
+
+          <div class="icon-block">
+            <p>
+              <audio src="<%= audio_path 'la_mente_oceano.mp3'%>" controls autoplay="autoplay">
+                Your browser does not support the audio element.
+              </audio>
+            </p>
+          </div>
+
+
+
           <div class="icon-block">
             <p>
               <a href='mailto:<%=@email%>'>
