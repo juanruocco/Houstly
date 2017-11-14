@@ -6,6 +6,8 @@ class Webcomponent
   field :style, type: String
 
   has_many :imagedescriptions
+  has_many :links
+
   belongs_to :place
 
 

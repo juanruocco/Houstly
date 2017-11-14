@@ -60,7 +60,8 @@
             <p>
               <a href="https://www.facebook.com/PsygonSurfCamp">
                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                <span></span></a>
+                <span></span>
+              </a>
             </p>
           </div>
         </div>
@@ -87,10 +88,31 @@
    </div>
    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul id="menu-primary-navigation" class="nav navbar-nav">
-         <li class="menu-cuartos"><a href="#rooms">Cuartos</a></li>
+
+        <%
+        @webcomponents = @place.webcomponents
+        @webcomponents.each do |webcomponent|
+
+          if webcomponent.style == 'header'
+              @links = webcomponent.links
+              @links.each do |link|
+              %>
+              <li class="menu-cuartos"><a href="<%=link.url%>"><%=link.name%></a></li>
+          <%
+              end
+          end
+          %>
+
+
+        <%
+        end
+        %>
+
+
+         <!-- <li class="menu-cuartos"><a href="#rooms">Cuartos</a></li>
          <li class="menu-cuartos"><a href="#activities">Actividades</a></li>
          <li class="menu-paquetes"><a href="#tours">Excursiones</a></li>
-         <li class="menu-reservar"><a href="#">Reservar</a></li>
+         <li class="menu-reservar"><a href="#">Reservar</a></li> -->
      </ul>
    </nav>
  </div>

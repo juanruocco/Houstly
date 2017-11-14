@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'links/index'
+
+  get 'git/status'
+
   resources :places do
     resources :webcomponents do
-      resources :imagedescriptions
+      resources :imagedescriptions, :links
     end
   end
 #, :tours, :activities, :common_areas

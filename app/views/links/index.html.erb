@@ -1,0 +1,35 @@
+<h1>Images with description component!</h1>
+<table>
+  <tr>
+    <td width="20%">Name</td>
+    <td width="30%">description</td>
+    <td width="20%">url</td>
+    <td width="20%"></td>
+  </tr>
+
+  <%= form_for (@link), url: {action: "create"} do |f| %>
+    <tr>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.text_field :description %></td>
+      <td><%= f.text_field :url, :size => 100 %></td>
+      <td><%= f.submit 'Add'%></td>
+    </tr>
+  <% end %>
+
+  <%
+  @links = @webcomponent.links
+  @links.each do |link| %>
+      <%= form_for ([@place,@webcomponent,link]) do |f| %>
+      <tr>
+        <td><%= f.text_field :name %></td>
+        <td><%= f.text_field :description %></td>
+        <td><%= f.text_field :url, :size => 100 %></td>
+        <td><%= f.submit 'Update', class: 'btn btn-primary' %></td>
+        <td><%= f.submit 'Delete', class: 'btn btn-primary' %></td>
+      </tr>
+      <% end %>
+  <% end %>
+
+</table>
+<br>
+<%= link_to 'Back', edit_place_webcomponent_path(@place,@webcomponent) %>
