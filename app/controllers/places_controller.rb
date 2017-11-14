@@ -20,7 +20,6 @@ class PlacesController < ApplicationController
     puts @place.name
 
     #current_place = @place
-
   end
 
   def update
@@ -38,11 +37,11 @@ class PlacesController < ApplicationController
       flash[:success] = "Place was deleted!"
       #redirect_to people_path, notice: "#{first_name} #{last_name} has been deleted!" and return
       redirect_to places_path
-    end
+  end
 
   private
   def place_params
-    params.require(:place).permit(:name_id, :name, :description, :facebook_url, :email, :cellphone, :logo_path, :location_url, :location_name, :picture, :video_url, :max_thumb_images, :max_slider_images)
+    params.require(:place).permit(:name_id, :name, :description, :facebook_url, :email, :cellphone, :logo_path, :location_url, :location_name, :picture, :video_url, :music_path, :max_thumb_images, :max_slider_images)
   end
 
 end
