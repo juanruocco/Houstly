@@ -13,7 +13,6 @@ class ImagedescriptionsController < ApplicationController
       if @imagedescription.update_attributes(imagedescription_params)
         flash[:success] = "place updated!"
       end
-
     elsif params[:commit] == 'Delete'
       @imagedescription.destroy
       flash[:success] = "Image Description was deleted!"
