@@ -1,0 +1,52 @@
+<h1>Users!</h1>
+<table>
+  <tr>
+    <th>Email</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Birthdate</th>
+    <th>Sex</th>
+    <th>Type License</th>
+    <th>Expiration Date</th>
+    <th>Psw</th>
+  </tr>
+  <% @users.each do |userit| %>
+      <%= form_for userit do |f| %>
+      <tr>
+        <td><%= f.text_field :email %></td>
+        <td><%= f.text_field :first_name %></td>
+        <td><%= f.text_field :last_name %></td>
+        <td><%= f.text_field :birthdate %></td>
+        <td><%= f.text_field :sex %></td>
+        <td><%= f.text_field :type_license %></td>
+        <td><%= f.text_field :expiration_date %></td>
+        <td><%= f.text_field :password_digest %></td>
+        <td>
+          <%= f.submit 'Update', class: 'btn btn-primary' %>
+        </td>
+        <td>
+            <%= f.submit 'Delete', class: 'btn btn-primary' %>
+       </td>
+      <td>
+        <% if userit.errors.any? %>
+           <h2>
+             <%= pluralize( userit.errors.count, "error") %> prohibido este articulo de
+             ser guardado:
+             <ul>
+               <% userit.errors.full_messages.each do |msj| %>
+                <li><%= msj %></li>
+               <%
+               end
+               %>
+             </ul>
+           </h2>
+        <%
+        end
+        %>
+      </td>
+      </tr>
+      <% end %>
+
+
+  <% end %>
+</table>
