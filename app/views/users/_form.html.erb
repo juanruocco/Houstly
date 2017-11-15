@@ -1,0 +1,26 @@
+<%= form_for(@user) do |f| %>
+
+  <%= render 'shared/error_messages' %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, class: 'form-control' %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, class: 'form-control' %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+  <%= f.label :birthdate %>
+  <%= f.text_field :birthdate, class: 'form-control' %>
+
+  <%= f.label :sex %>
+  <%= f.text_field :sex, class: 'form-control' %>
+  <br/>
+  <%= f.submit 'Sign up for Houstly', class: 'btn btn-primary' %>
+<% end %>

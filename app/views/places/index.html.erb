@@ -5,7 +5,7 @@
   <%
   places = Place.all
   places.each do |place|
-  %>
+ %>
   <tr>
     <td><%= link_to place.name_id, edit_place_path(place), class: "btn btn-default" %></td>
     <td><%= place.name %></td>
@@ -17,7 +17,11 @@
     <td>
       <%= button_to "Delete", place, method: :delete, data: { confirm: "Are you sure you wish to delete #{place.name} #{place.description}?" }, class: "btn btn-danger" %>
     </td>
-
   </tr>
   <% end %>
 </table>
+<br/>
+<%= link_to 'Tours', tours_path %>
+<br/>
+<%= link_to 'Rooms', rooms_path %>
+
