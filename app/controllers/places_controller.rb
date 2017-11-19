@@ -2,6 +2,10 @@ class PlacesController < ApplicationController
 
   def index
     @place = Place.new
+    if !current_user
+      redirect_to '/login'
+    end
+
   end
 
   def new

@@ -12,16 +12,19 @@ class ApplicationController < ActionController::Base
 
   # Returns true if the user is logged in, false otherwise.
   def logged_in?
+    puts "loggend in?"
     !current_user.nil?
   end
 
   def authorize
+    puts "auth in"
     redirect_to '/login' unless current_user
   end
 
   private
     # Confirms a logged-in user.
     def logged_in_user
+      puts "loggend in"
       unless logged_in?
         #store_location
         #flash[:danger] = "Please log in."

@@ -15,10 +15,14 @@
     <% end %>
     <%= yield %>
      <%= debug(params) if Rails.env.development? %>
-     <% if logged_in? %>
+
+     <%
+     puts "logged in"
+     puts logged_in?
+     if logged_in? %>
      <li><%= link_to "Log out", '/logout' %></li>
 
-    
+
      <% else %>
        <li><%= link_to "Log in", login_path %></li>
      <% end %>

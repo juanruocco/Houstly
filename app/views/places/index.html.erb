@@ -3,7 +3,9 @@
   <%= render "form" %>
 
   <%
-  places = Place.all
+  places = @current_user.places.all
+  puts "places user"
+  puts @current_user.places.all.count
   places.each do |place|
  %>
   <tr>
@@ -26,8 +28,3 @@
   </tr>
   <% end %>
 </table>
-<br/>
-<%= link_to 'Tours', tours_path %>
-<br/>
-<%= link_to 'Rooms', rooms_path %>
-

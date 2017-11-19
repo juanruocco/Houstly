@@ -1,12 +1,24 @@
 Rails.application.routes.draw do
 
-  resources :places do
+  resources  :places  do
     resources :webcomponents do
       resources :imagedescriptions, :links
     end
   end
 #, :tours, :activities, :common_areas
   #resources :rooms, :tours, :activities, :common_areas
+  resources :users
+  post '/place' => 'places#create'
+  get  '/place' => 'places#new'
+
+  get  '/users' => 'users#index'
+  post '/users' => 'users#create'
+
+  get  '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get  '/logout' => 'sessions#destroy'
+
+  get  '/signup' => 'users#new'
 
   get '/:id', to: 'welcome#index'
 
@@ -24,15 +36,6 @@ Rails.application.routes.draw do
   # post '/common_areas' => 'common_areas#create'
   # get  '/common_areas' => 'common_areas#new'
 
-  post '/place' => 'places#create'
-  get  '/place' => 'places#new'
 
-  get  '/users' => 'users#index'
-
-  get  '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get  '/logout' => 'sessions#destroy'
-
-  get  '/signup' => 'users#new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
