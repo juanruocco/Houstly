@@ -10,16 +10,31 @@
   domains = request.host.split(".")
   if domains.count > 1
     @placeId = request.host.split(".").first
-  end
 
-  unless @client
+  end
+  %>
+  place1
+  <%=@placeId%>
+  <%
+  unless @placeId
     if Place.where(:name_id => params[:id]).present?
       @placeId = params[:id]
+
     end
   end
+  %>
+  place2
+  <%=@placeId%>
+  <%
+
   unless @placeId
     @placeId = "finca"
+
   end
+  %>
+  place3
+  <%=@placeId%>
+  <%
 
 
 
