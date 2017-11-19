@@ -6,46 +6,48 @@
 <body>
 
  <%
-  @place
+  #domain = "www.houstly.com/psygon"
+  #domains = domain.split(".")
   domains = request.host.split(".")
+
   if domains.count > 1
-    firstSub = request.host.split(".").first
+    firstSub = domains.first
+    puts "firstsub"
+    puts firstSub
     if Place.where(:name_id => firstSub).present?
       @place = Place.find_by(:name_id => firstSub)
-      raw "place1"
-      raw place.name
+      puts "place1"
+      puts @place.name
     else
-      secondSub = request.host.split(".").second
+      secondSub = domains.second
+      puts "secondSub"
+      puts secondSub
+
       if Place.where(:name_id => secondSub).present?
         @place = Place.find_by(:name_id => secondSub)
-        raw "place1"
-        raw place.name
+        puts "place2"
+        puts @place.name
       end
 
     end
 
   end
-  %>
-  place1
-  <%#=@place.name%>
-  <%
+
   unless @place
     if Place.where(:name_id => params[:id]).present?
       @place = Place.find_by(:name_id => params[:id])
-
+      puts "place3"
+      puts @place.name
     end
   end
-  %>
-  place2
 
-  <%#=@place.name%>
 
-  <%
-
-  unless @placeId
+  unless @place
     @place = Place.find_by(:name_id => "finca")
   end
-  
+
+  puts "place4"
+  puts @place.name
 
 
   @name_id =@place.name_id
