@@ -11,10 +11,17 @@
   if domains.count > 1
     firstSub = request.host.split(".").first
     if Place.where(:name_id => firstSub).present?
-      @place = Place.find_by(:name_id => @placeId)
+      @place = Place.find_by(:name_id => firstSub)
+      raw "place1"
+      raw place.name
     else
       secondSub = request.host.split(".").second
-      @place = Place.find_by(:name_id => @placeId)
+      if Place.where(:name_id => secondSub).present?
+        @place = Place.find_by(:name_id => secondSub)
+        raw "place1"
+        raw place.name
+      end
+
     end
 
   end
@@ -24,21 +31,21 @@
   <%
   unless @place
     if Place.where(:name_id => params[:id]).present?
-      @place = Place.find_by(:name_id => @placeId)
+      @place = Place.find_by(:name_id => params[:id])
+
     end
   end
   %>
   place2
-  <%#=@placeId%>
+
+  <%#=@place.name%>
+
   <%
 
   unless @placeId
     @place = Place.find_by(:name_id => "finca")
   end
-  %>
-  place3
-  <%#=@placeId%>
-  <%
+  
 
 
   @name_id =@place.name_id
