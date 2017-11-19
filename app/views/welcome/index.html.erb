@@ -6,39 +6,41 @@
 <body>
 
  <%
-  @placeId
+  @place
   domains = request.host.split(".")
   if domains.count > 1
-    @placeId = request.host.split(".").first
+    firstSub = request.host.split(".").first
+    if Place.where(:name_id => firstSub).present?
+      @place = Place.find_by(:name_id => @placeId)
+    else
+      secondSub = request.host.split(".").second
+      @place = Place.find_by(:name_id => @placeId)
+    end
 
   end
   %>
   place1
-  <%=@placeId%>
+  <%#=@place.name%>
   <%
-  unless @placeId
+  unless @place
     if Place.where(:name_id => params[:id]).present?
-      @placeId = params[:id]
-
+      @place = Place.find_by(:name_id => @placeId)
     end
   end
   %>
   place2
-  <%=@placeId%>
+  <%#=@placeId%>
   <%
 
   unless @placeId
-    @placeId = "finca"
-
+    @place = Place.find_by(:name_id => "finca")
   end
   %>
   place3
-  <%=@placeId%>
+  <%#=@placeId%>
   <%
 
 
-
-  @place = Place.find_by(:name_id => @placeId)
   @name_id =@place.name_id
   @name = @place.name
   @location = @place.location_name
