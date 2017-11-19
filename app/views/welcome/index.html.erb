@@ -6,10 +6,23 @@
 <body>
 
  <%
-  @placeId = "finca"
-  if Place.where(:name_id => params[:id]).present?
-    @placeId = params[:id]
+  @placeId
+  domains = request.host.split(".")
+  if domains.count > 1
+    @placeId = request.host.split(".").first
   end
+
+  unless @client
+    if Place.where(:name_id => params[:id]).present?
+      @placeId = params[:id]
+    end
+  end
+  unless @placeId
+    @placeId = "finca"
+  end
+
+
+
   @place = Place.find_by(:name_id => @placeId)
   @name_id =@place.name_id
   @name = @place.name
