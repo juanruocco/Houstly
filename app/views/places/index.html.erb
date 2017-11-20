@@ -3,7 +3,8 @@
   <%= render "form" %>
 
   <%
-  places = @current_user.places.all
+  #places = @current_user.places.all
+  places = Place.all
   puts "places user"
   puts @current_user.places.all.count
   places.each do |place|
