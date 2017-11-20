@@ -11,6 +11,7 @@ class Place
   field :logo_path, type: String
   field :location_url, type: String
   field :video_url, type: String
+  field :reservar_url, type: String
   field :music_path, type: String
   field :max_thumb_images, type: Integer
   field :max_slider_images, type: Integer
