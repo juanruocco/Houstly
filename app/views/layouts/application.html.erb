@@ -17,14 +17,13 @@
      <%= debug(params) if Rails.env.development? %>
 
      <%
-     puts "logged in"
-     puts logged_in?
-     if logged_in? %>
-     <li><%= link_to "Log out", '/logout' %></li>
+     if logged_in?
+       %>
+     <li><%#= link_to "Log out", '/logout' %></li>
 
 
      <% else %>
-       <li><%= link_to "Log in", login_path %></li>
+       <li><%#= link_to "Log in", login_path %></li>
      <% end %>
 
   </body>
