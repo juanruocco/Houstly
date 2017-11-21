@@ -57,7 +57,7 @@
     </td>
   </tr>
   <tr>
-    <td>Video url: </td>
+    <td>Reserva url: </td>
     <td>
       <%= f.text_field :reservar_url, :size => 150 %>
     </td>
@@ -85,6 +85,19 @@
       <%= f.text_field :max_thumb_images %>
     </td>w
   </tr>
+  <tr>
+    <td>Direction: </td>
+    <td>
+      <%= f.text_field :direction %>
+    </td>w
+  </tr>
+  <tr>
+    <td>Telephone: </td>
+    <td>
+      <%= f.text_field :telephone %>
+    </td>w
+  </tr>
+
   <tr>
     <td><%= link_to "Web Components", place_webcomponents_path(@place) %></td>
   </tr>

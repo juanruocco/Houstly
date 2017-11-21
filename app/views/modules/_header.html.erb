@@ -1,6 +1,7 @@
 <%
   @music_path = @place.music_path
-
+  @direction = @place.direction
+  @telephone = @place.telephone
 %>
 <header class="banner navbar navbar-default navbar-static-top dark-header" role="banner" data-transparent-header="true">
   <div class="top-nav">
@@ -44,15 +45,23 @@
             <p>
               <a href='<%=@location_url%>' target="_blank">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>Estamos en</span>
+                <span>Estamos en <%=@direction%></span>
               </a>
             </p>
           </div>
           <div class="icon-block">
             <p>
-              <a href='tel:<%=@cellphone%>'>
+              <a href='cel:<%=@cellphone%>'>
                 <i class="fa fa-mobile" aria-hidden="true"></i>
                 <span><%=@cellphone%></span>
+              </a>
+            </p>
+          </div>
+          <div class="icon-block">
+            <p>
+              <a href='tel:<%=@telephone%>'>
+                <i class="fa fa-mobile" aria-hidden="true"></i>
+                <span><%=@telephone%></span>
               </a>
             </p>
           </div>

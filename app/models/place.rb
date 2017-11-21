@@ -16,6 +16,11 @@ class Place
   field :max_thumb_images, type: Integer
   field :max_slider_images, type: Integer
 
+  field :direction, type: String
+  field :telephone, type: String
+
+
+
   has_many :webcomponents
 
 
