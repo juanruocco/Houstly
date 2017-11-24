@@ -1,37 +1,70 @@
-<html lang="es-CO" xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<!DOCTYPE html>
+<html>
 
-</head>
 <body>
+<% if current_user %>
 
- <%
-  @place = Place.find_by(:name_id => "finca")
-  @name_id =@place.name_id
-  @name = @place.name
-  @location = @place.location_name
-  @image_url = asset_path("#{@name_id}_slider1.jpg")
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <table class="table table-striped borderless table-bordered">
 
-  @description = @place.description
-  @video = @place.video_url
-  @thumb_images = @place.max_thumb_images
-  @rooms = @place.rooms.all
-  @tours = @place.tours.all
- %>
+        <tr>
 
-  <%= render 'modules/slider' %>
-  <%= render 'modules/videofotos' %>
-  <%= render 'modules/rooms' %>
+          <td class="text-center">
 
-  <style scoped="">
-  section#themo_rooms_1{padding-top:75px; padding-bottom:75px}
-  </style>
+            <strong >Desconocido mas Compatible</strong>
+          </td>
+          <td class="text-center">
+            <strong>Compatibilidad</strong>
 
-  <%= render 'modules/fotosdescription' %>
+          </td>
+        </tr>
+
+        <%
+        #if user_most_compatible
+        %>
+        <tr>
+          <td> <%#=user_most_compatible.name %> </td>
+          <td> <%#=100*most_compatible/self_compatibility%>%</td>
+        </tr>
+
+        <%#end%>
 
 
+      </table>
+    </div>
+  </div>
+
+</br></br></br>
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <table class="table table-striped borderless table-bordered">
+
+        <tr>
+
+          <td class="text-center">
+
+            <strong >Amigos</strong>
+          </td>
+          <td class="text-center">
+            <strong>Compatibilidad</strong>
+
+          </td>
+        </tr>
 
 
-
+      </table>
+    </div>
+  </div>
 </div>
 
+
+<% else %>
+  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+<% end %>
+
+<%= yield %>
+</body>
 </html>

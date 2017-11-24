@@ -1,3 +1,8 @@
+<%
+  @music_path = @place.music_path
+  @direction = @place.direction
+  @telephone = @place.telephone
+%>
 <header class="banner navbar navbar-default navbar-static-top dark-header" role="banner" data-transparent-header="true">
   <div class="top-nav">
     <div class="container">
@@ -6,35 +11,66 @@
           <p>Bienvenidos a <%=@name%></p>
         </div>
         <div class="top-nav-icon-blocks">
+          <%
+          if !@music_path.nil? && !@music_path.empty?
+          %>
           <div class="icon-block">
             <p>
-              <a href="mailto:mail@maill.com">
-                <i class="glyphicons glyphicons-envelope"></i>
-                <span>mail@mail.com</span>
+              <button onclick="playAud()" type="button">
+                <i id ="play_pause" class="fa fa-pause" aria-hidden="true"></i>
+              </button>
+            </p>
+          </div>
+
+
+          <div class="icon-block">
+            <p>
+              <audio id ="music_player" src="<%= audio_path @music_path%>"  autoplay="autoplay">
+
+              </audio>
+            </p>
+          </div>
+          <%
+          end
+          %>
+          <div class="icon-block">
+            <p>
+              <a href='mailto:<%=@email%>' >
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <span>email</span>
               </a>
             </p>
           </div>
           <div class="icon-block">
             <p>
-              <a href="#">
-                <i class="glyphicons glyphicons-google-maps"></i>
-                <span>Estamos en</span>
+              <a href='<%=@location_url%>' target="_blank">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>Estamos en <%=@direction%></span>
               </a>
             </p>
           </div>
           <div class="icon-block">
             <p>
-              <a href="tel:+1%20111%201111%20111">
-                <i class="glyphicons glyphicons-iphone"></i>
-                <span>+1 11111111</span>
+              <a href='cel:<%=@cellphone%>'>
+                <i class="fa fa-mobile" aria-hidden="true"></i>
+                <span><%=@cellphone%></span>
               </a>
             </p>
           </div>
           <div class="icon-block">
             <p>
-              <a href="https://www.facebook.com/PsygonSurfCamp">
-                <i class="social social-facebook"></i>
-                <span></span></a>
+              <a href='tel:<%=@telephone%>'>
+                <i class="fa fa-mobile" aria-hidden="true"></i>
+                <span><%=@telephone%></span>
+              </a>
+            </p>
+          </div>
+          <div class="icon-block">
+            <p>
+              <a href="https://www.facebook.com/PsygonSurfCamp" target="_blank">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <span></span>
+              </a>
             </p>
           </div>
         </div>
@@ -52,18 +88,41 @@
           <span class="icon-bar"></span>
       </button>
       <div id="logo">
-          <a href="./">
 
-          <img class="logo-trans logo-reg" src="<%=asset_path('psygon_logo.png')%>" height="48" width="100" alt="Hotel Finca El Cielo">
-          <img class="logo-main logo-reg" src="<%=asset_path('psygon_logo.png')%>" height="48" width="50" alt="Hotel Finca El Cielo">
+          <a href="./">
+          <img class="logo-trans logo-reg" src="<%=asset_path(@logo_path)%>" height="48" width="100" alt="Hotel Finca El Cielo">
+          <img class="logo-main logo-reg" src="<%=asset_path(@logo_path)%>" height="48" width="50" alt="Hotel Finca El Cielo">
+	  
           </a>
       </div>
    </div>
    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul id="menu-primary-navigation" class="nav navbar-nav">
-         <li class="menu-cuartos"><a href="#rooms">Cuartos</a></li>
+
+        <%
+        @webcomponents = @place.webcomponents
+        @webcomponents.each do |webcomponent|
+
+          if webcomponent.style == 'header'
+              @links = webcomponent.links
+              @links.each do |link|
+              %>
+              <li class="menu-cuartos"><a href="<%=link.url%>"><%=link.name%></a></li>
+          <%
+              end
+          end
+          %>
+
+
+        <%
+        end
+        %>
+
+
+         <!-- <li class="menu-cuartos"><a href="#rooms">Cuartos</a></li>
+         <li class="menu-cuartos"><a href="#activities">Actividades</a></li>
          <li class="menu-paquetes"><a href="#tours">Excursiones</a></li>
-         <li class="menu-reservar"><a href="#">Reservar</a></li>
+         <li class="menu-reservar"><a href="#">Reservar</a></li> -->
      </ul>
    </nav>
  </div>

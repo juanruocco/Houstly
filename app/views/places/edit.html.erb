@@ -1,7 +1,7 @@
-<h1>Edit Hotel</h1>
+<h1>Edit Hotel/Hostal</h1>
 
 <table >
-  <%= form_for @place do |f| %>
+  <%= form_for [@user, @place] do |f| %>
   <tr>
     <td width="15%">Name: </td>
     <td width="85%" >
@@ -12,6 +12,36 @@
     <td>Description: </td>
     <td>
       <%= f.text_field :description, :size => 150 %>
+    </td>
+  </tr>
+  <tr>
+    <td>facebook_url: </td>
+    <td>
+      <%= f.text_field :facebook_url, :size => 150 %>
+    </td>
+  </tr>
+  <tr>
+    <td>email: </td>
+    <td>
+      <%= f.text_field :email, :size => 150 %>
+    </td>
+  </tr>
+  <tr>
+    <td>cellphone: </td>
+    <td>
+      <%= f.text_field :cellphone, :size => 150 %>
+    </td>
+  </tr>
+  <tr>
+    <td>logo: </td>
+    <td>
+      <%= f.text_field :logo_path, :size => 150 %>
+    </td>
+  </tr>
+  <tr>
+    <td>ubicacion mapa: </td>
+    <td>
+      <%= f.text_field :location_url, :size => 150 %>
     </td>
   </tr>
   <tr>
@@ -27,6 +57,18 @@
     </td>
   </tr>
   <tr>
+    <td>Reserva url: </td>
+    <td>
+      <%= f.text_field :reservar_url, :size => 150 %>
+    </td>
+  </tr>
+  <tr>
+    <td>Music background path: </td>
+    <td>
+      <%= f.text_field :music_path, :size => 150 %>
+    </td>
+  </tr>
+  <tr>
     <td>Number Sliders Images: </td>
     <td>
       <%= f.text_field :max_slider_images %>
@@ -39,16 +81,25 @@
     </td>
   </tr>
   <tr>
-    <td><%= link_to "Rooms", rooms_path(@place) %></td>
+    <td>Direction: </td>
+    <td>
+      <%= f.text_field :direction %>
+    </td>
   </tr>
   <tr>
-    <td><%= link_to "Tours", tours_path(@place) %></td>
+    <td>Telephone: </td>
+    <td>
+      <%= f.text_field :telephone %>
+    </td>
   </tr>
-
+  <tr>
+    <td><%= link_to "Web Components", user_place_webcomponents_path(@user,@place) %></td>
+  </tr>
   <tr>
     <td><%= f.submit "Submit" %></td>
   </tr>
-
-
+  <tr>
+    <td><%= link_to 'Back', user_places_path %></td>
+  </tr>
   <% end %>
 </table>

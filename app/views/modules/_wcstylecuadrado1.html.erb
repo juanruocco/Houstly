@@ -1,0 +1,37 @@
+<div id='<%=@webcomponent.name%>'>
+  <section id="themo_rooms_1" class=" rooms ">
+    <div class="container">
+      <div class="row">
+        <div class="section-header col-xs-12 centered">
+          <h2><%= @webcomponent.name %></h2>
+          <p><%=  @webcomponent.description %></p>
+        </div>
+      </div>
+<%
+  @imagedescriptions = @webcomponent.imagedescriptions
+  @imagedescriptions.each do |imagedescription|
+    room_name = imagedescription.name
+    room_description = imagedescription.description
+    room_image_url = asset_path(imagedescription.image_path)
+%>
+
+      <div id="themo_rooms_1-post-1371" class="themo_rooms type-themo_rooms rooms-item item col-lg-4 col-md-4 col-sm-6 p-en-suite post-1371 status-publish format-standard has-post-thumbnail hentry themo_room_type-en-suite" style="height: 313px;">
+        <div class="room-wrap">
+          <img width="380" height="380" src='<%=room_image_url%>' class="img-responsive room-img wp-post-image" alt=""  sizes="(max-width: 380px) 100vw, 380px">
+          <div class="room-overlay"></div>
+          <div class="room-inner" style="height: 313px;">
+            <div class="room-center" style="visibility: visible;">
+              <h3 class="room-title" ><%=room_name%></h3>
+              <div class="pricing-cost" style="font-size: 17px;">
+                <%=room_description%>
+              </div>
+            </div><!-- /.room-center -->
+
+          </div><!-- /.room-inner -->
+        </div><!-- /.room-wrap -->
+      </div><!-- /.col-md -->
+
+      <%end%>
+    </div><!-- /.row -->
+  </section>
+</div><!-- /.container -->

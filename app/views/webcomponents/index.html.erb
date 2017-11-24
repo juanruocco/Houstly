@@ -1,0 +1,37 @@
+<h1>Web components!</h1>
+<table>
+
+  <tr>
+    <td width="20%">Nombre</td>
+    <td width="30%">Descripcion</td>
+    <td width="20%">Estilo</td>
+    <td width="20%"></td>
+  </tr>
+  <%= form_for [@user, @place,Webcomponent.new] , url: {action: "create"} do |f| %>
+
+  <%#= form_for [@user, @place,Webcomponent.new]  do |f| %>
+    <tr>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.text_field :description %></td>
+      <td><%= f.text_field :style %></td>
+      <td><%= f.submit 'Add'%></td>
+    </tr>
+  <% end %>
+
+  <%
+  @webcomponents = @place.webcomponents
+  @webcomponents.each do |webcomponent|
+    %>
+      <tr>
+        <td><%= link_to webcomponent.name, edit_user_place_webcomponent_path(current_user,@place,webcomponent), class: "btn btn-default" %></td>
+        <td><%= webcomponent.description %></td>
+        <td><%= webcomponent.style %></td>
+        <td>
+          <%= button_to "Delete",user_place_webcomponent_path(current_user,@place, webcomponent), method: :delete, data: { confirm: "Are you sure you wish to delete #{webcomponent.name} #{webcomponent.description}?" }, class: "btn btn-danger" %>
+        </td>
+      </tr>
+  <% end %>
+
+</table>
+<br>
+<%= link_to 'Back', edit_user_place_path(current_user, @place) %>

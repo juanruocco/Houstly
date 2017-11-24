@@ -1,0 +1,230 @@
+
+/*
+
+Contents
+
+- Base
+- Header
+- General
+- Primary Content
+- Parallax
+- Audio, Video, Media
+- Typography
+- Buttons
+- Forms
+- Blog
+- Rooms
+- Booked Plugin
+- WooCommerce Plugin
+- Accordion Meta Box
+- Booked Calendar Meta Box
+- Brands Meta Box
+- Call To Action Meta Box
+- Conversion Form Meta Box
+- FAQ Meta Box
+- Features Meta Box
+- Map Meta Box
+- Pricing Plans Meta Box
+- Service Blocks Meta Box
+- Service Blocks Split Meta Box
+- Showcase Meta Box
+- Slider Meta Box
+- Team Meta Box
+- Testimonials Meta Box
+- Thumbnail Slider Meta Box
+- Tour Meta Box
+- Widgets
+- Sidebar
+- Footer
+- Shortcodes
+- ScrollUp
+- Headhesive (sticky header)
+- Misc
+
+*/
+
+
+
+
+/* ==========================================================================
+   Rooms
+   ========================================================================== */
+
+/* Index / Meta Box */
+
+.rooms {
+	padding-top:60px;
+	padding-bottom:60px;
+}
+
+.rooms-filters {
+	padding:0 0 30px;
+	text-align:center;
+	font-size:15px;
+}
+.rooms-filters span {
+	font-weight:bold;
+	margin-right:15px;
+}
+.rooms-filters a {
+	display:inline-block;
+	margin:5px 15px;
+	padding:1px 0;
+	color:#8d9093;
+	text-decoration:none;
+	-webkit-transition:all 0.1s linear;
+	-moz-transition:all 0.1s linear;
+	transition:all 0.1s linear;
+}
+.rooms-filters a:hover {color:#414141}
+
+.rooms-filters a.current {
+	color:#1e8190;
+	border:0;
+	border-bottom:1px solid #1e8190;
+}
+
+.light-text .rooms-filters span,
+.light-text .rooms-filters a {
+	color:#fff;
+	opacity:0.6;
+}
+.light-text .rooms-filters a:hover,
+.light-text .rooms-filters a.current {
+	color:#fff;
+	opacity:1;
+}
+.light-text .rooms-filters a.current {
+	border-bottom:1px solid #fff;
+}
+
+#rooms-row {
+    margin-left:0;
+    margin-right:0;
+}
+
+
+.rooms .rooms-item {
+	padding:0;
+	overflow:hidden;
+}
+
+.room-img {
+	-webkit-transition:all 0.25s linear;
+	-moz-transition:all 0.25s linear;
+	transition:all 0.25s linear;
+}
+.rooms-item:hover .room-img {
+	transform:scale(1.05,1.05)
+}
+
+.room-overlay {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#1e8190;
+	opacity:0;
+	-webkit-transition:all 0.1s linear;
+	-moz-transition:all 0.1s linear;
+	transition:all 0.1s linear;
+}
+.rooms-item:hover .room-overlay {
+	opacity:0.75;
+}
+
+.room-inner {
+	display:table;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.room-center {
+	display:table-cell;
+	vertical-align:middle;
+	padding:30px;
+	text-align:center;
+	opacity:0;
+	visibility:hidden;
+	-webkit-transform:translateY(8px);
+	-ms-transform:translateY(8px);
+	transform:translateY(8px);
+	-webkit-transition:all 0.2s linear;
+	-moz-transition:all 0.2s linear;
+	transition:all 0.2s linear;
+}
+.rooms-item:hover .room-center {
+	opacity:1;
+	-webkit-transform:translateY(0);
+	-ms-transform:translateY(0);
+	transform:translateY(0);
+}
+
+.room-icon, .room-title, .room-sub {color:#fff}
+
+.room-icon {font-size:36px}
+
+.room-title {
+	font-size:20px;
+	font-weight:normal;
+	line-height:120%;
+	text-transform:uppercase;
+	margin:8px 0 0;
+}
+
+.room-sub {
+	line-height:130%;
+	margin:8px 0 0;
+}
+
+.room-link {
+	display:block;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+.page-title h1{
+    text-transform: uppercase;
+    /*font-weight: 600;*/
+    font-size:40px;
+}
+
+.page-title h3 {
+    font-size:26px;
+    font-weight:400;
+    line-height:150%;
+    margin:0;
+    padding:20px 0 0;
+}
+
+
+
+body.single .room-header .page-title {border-bottom:0px;}
+
+body.single-themo_rooms section.page-title{margin: 0px;}
+
+body.single-themo_rooms h2{ text-transform: uppercase;}
+
+/* ==========================================================================
+   Pricing Plans Meta Box
+   ========================================================================== */
+
+.room-center .pricing-cost {
+    color:#fff;
+    padding-bottom: 0px;
+    font-size: 36px;
+    margin-top: 5px;
+}
