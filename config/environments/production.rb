@@ -1,9 +1,12 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #dont show error when assets is dont found
+  config.assets.unknown_asset_fallback = true
+  
   config.serve_static_assets = true
   config.assets.compile = true
-  
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

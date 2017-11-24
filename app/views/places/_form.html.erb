@@ -2,10 +2,21 @@
   <td>Name ID</td>
   <td>Name</td>
   <td>Description</td>
+  <td>facebook_url</td>
+  <td>email</td>
+  <td>cellphone</td>
+  <td>logo url</td>
+  <td>location url</td>
   <td>Location</td>
+
   <td>Video url</td>
+  <td>Reserva url</td>
+
+  <td>Background Music</td>
   <td>Number Sliders Images</td>
   <td>Number Thumb Images</td>
+  <td>Direction</td>
+  <td>telephone</td>
 </tr>
 
 <%= form_for @place do |f| %>
@@ -13,9 +24,21 @@
   <td><%= f.text_field :name_id %></td>
   <td><%= f.text_field :name %></td>
   <td><%= f.text_field :description, :size => 70 %></td>
+  <td><%= f.text_field :facebook_url %></td>
+  <td><%= f.text_field :email %></td>
+  <td><%= f.text_field :cellphone %></td>
+  <td><%= f.text_field :logo_path %></td>
+  <td><%= f.text_field :location_url %></td>
   <td><%= f.text_field :location_name %></td>
+
   <td><%= f.text_field :video_url %></td>
+  <td><%= f.text_field :reservar_url %></td>
+
+  <td><%= f.text_field :music_path %></td>
+
   <td><%= f.text_field :max_slider_images, :size => 10 %></td>
   <td><%= f.text_field :max_thumb_images, :size => 10 %></td>
+  <td><%= f.text_field :direction %></td>
+  <td><%= f.text_field :telephone %></td>
   <td><%= f.submit "Submit" %></td>
 <% end %>

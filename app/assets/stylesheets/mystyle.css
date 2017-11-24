@@ -217,19 +217,3 @@ header.dark-header .top-nav-text p, header.dark-header .top-nav-icon-blocks .ico
     margin: 0;
     color: #828282;
 }
-
-.glyphicons {
-    font-family: 'Glyphicons Regular';
-}
-
-.social {
-    font-family: 'Glyphicons Social Regular';
-}
-
-.social-facebook:before {
-    content: "\E031";
-}
-
-span.icon {
-  font-family: 'Glyphicons Regular';
-}
