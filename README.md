@@ -48,3 +48,4 @@ Autenticacion basica para cualquier modificación en Places
 usuario: house (valor quemado)
 clave: secret (valor quemado)
 -- fin Tomas
+pruena cristian merge
