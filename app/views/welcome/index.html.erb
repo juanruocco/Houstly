@@ -6,14 +6,17 @@
 <body>
 
  <%
-  #domain = "www.houstly.com/psygon"
-  #domains = domain.split(".")
-  domains = request.host.split(".")
+  domain = "www.psygonsurfcamp.com"
+  domains = domain.split(".")
+  #domains = request.host.split(".")
 
+  #find by subdomain
   if domains.count > 1
     firstSub = domains.first
     puts "firstsub"
     puts firstSub
+
+
     if Place.where(:name_id => firstSub).present?
       @place = Place.find_by(:name_id => firstSub)
       puts "place1"
@@ -32,7 +35,33 @@
     end
 
   end
+  #find by domain
+  unless @place
+    firstSub = domains.first
+    puts "firstsuba"
+    puts firstSub
 
+
+    if Place.where(:domain => firstSub).present?
+      @place = Place.find_by(:domain => firstSub)
+      puts "place1a"
+      puts @place.name
+    else
+      secondSub = domains.second
+      puts "secondSuba"
+      puts secondSub
+
+      if Place.where(:domain => secondSub).present?
+        @place = Place.find_by(:domain => secondSub)
+        puts "place2a"
+        puts @place.name
+      end
+
+    end
+
+  end
+
+  #Find by slash atribute
   unless @place
     if Place.where(:name_id => params[:id]).present?
       @place = Place.find_by(:name_id => params[:id])
@@ -75,6 +104,5 @@
   <%= render 'modules/webcomponents' %>
 </div>
 
-<%=request.subdomains(0).first%>
-<%=request.host%>
+
 </html>

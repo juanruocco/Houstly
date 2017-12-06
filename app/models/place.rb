@@ -18,6 +18,7 @@ class Place
 
   field :direction, type: String
   field :telephone, type: String
+  field :domain, type: String
 
 
 

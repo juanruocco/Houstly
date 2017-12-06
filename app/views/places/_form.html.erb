@@ -17,6 +17,7 @@
   <td>Number Thumb Images</td>
   <td>Direction</td>
   <td>telephone</td>
+  <td>Domain</td>
 </tr>
 
 <%= form_for @place do |f| %>
@@ -40,5 +41,6 @@
   <td><%= f.text_field :max_thumb_images, :size => 10 %></td>
   <td><%= f.text_field :direction %></td>
   <td><%= f.text_field :telephone %></td>
+  <td><%= f.text_field :domain %></td>
   <td><%= f.submit "Submit" %></td>
 <% end %>
